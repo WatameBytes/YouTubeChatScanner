@@ -11,7 +11,7 @@ def click():
 
 window = Tk()
 
-photo = PhotoImage(file="ganyu.png")
+photo = PhotoImage(file="Images/ganyu.png")
 
 button = Button(
     window,

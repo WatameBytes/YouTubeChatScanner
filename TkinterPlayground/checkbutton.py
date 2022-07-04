@@ -11,7 +11,7 @@ window = Tk()
 
 x = IntVar() # If we use True/False we should use BooleanVar :: StringVar if we use "YES"/"NO"
 
-ganyu_photo = PhotoImage(file="ganyu.png")
+ganyu_photo = PhotoImage(file="Images/ganyu.png")
 
 check_button = Checkbutton(
     window,

@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a66727e-0df2-4734-8e80-3437702493d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TkinterPlayground/checkbutton.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TkinterPlayground/Images/barbara.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TkinterPlayground/Images/yanfei.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TkinterPlayground/radioButtons.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/buttons.py" beforeDir="false" afterPath="$PROJECT_DIR$/TkinterPlayground/buttons.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/checkbutton.py" beforeDir="false" afterPath="$PROJECT_DIR$/TkinterPlayground/checkbutton.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/ganyu.png" beforeDir="false" afterPath="$PROJECT_DIR$/TkinterPlayground/Images/ganyu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/label.py" beforeDir="false" afterPath="$PROJECT_DIR$/TkinterPlayground/label.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/windows.py" beforeDir="false" afterPath="$PROJECT_DIR$/TkinterPlayground/windows.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,10 +42,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Arisa\PycharmProjects\julyProject\TkinterPlayground\Images" />
       <recent name="C:\Users\Arisa\PycharmProjects\julyProject\TkinterPlayground" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.checkbutton">
+  <component name="RunManager" selected="Python.radioButtons">
     <configuration name="buttons" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="julyProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -123,7 +131,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="windows" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="radioButtons" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="julyProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -135,7 +143,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TkinterPlayground/windows.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TkinterPlayground/radioButtons.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -146,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.radioButtons" />
         <item itemvalue="Python.checkbutton" />
         <item itemvalue="Python.entry" />
         <item itemvalue="Python.buttons" />
         <item itemvalue="Python.label" />
-        <item itemvalue="Python.windows" />
       </list>
     </recent_temporary>
   </component>
