@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a66727e-0df2-4734-8e80-3437702493d8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChatScanner" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PythonHowTo/Inheritance/MainInheritance.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/PythonHowTo/oop/OOPExample.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/PythonHowTo/oop/carFile.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/PythonHowTo/oop/product.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/RunYTDLP.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ytDownload.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ytDownload.sh.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonStudy.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonHowTo/Inheritance/MainInheritance.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonStudy.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +264,7 @@
       <workItem from="1657059389202" duration="6025000" />
       <workItem from="1657066809660" duration="370000" />
       <workItem from="1657067234095" duration="1796000" />
-      <workItem from="1657069846471" duration="12691000" />
+      <workItem from="1657069846471" duration="12989000" />
     </task>
     <servers />
   </component>
