@@ -1,63 +1,44 @@
-from tkinter import *
+from CollectChat import chatScan
+import time
+import threading
+
+# def getChatFrequencyFromYoutubeVideo():
+#     chatScan.dataCollector(videoOrFileNameEntry, youtubeLinkEntry)
+
+choiceOneBuffer = False
+choiceTwoBuffer = False
+choiceThreeBuffer = False
+
+def getChatData(test):
+    global choiceOneBuffer
+    choiceOneBuffer = True
+    print("Getting chat data...")
+    print( "\n" + test + "\n")
+    time.sleep(4)
+    print("\nGot Chat Data")
+
+
+def downloadVideo():
+    print("Downloading YouTube Video")
+
+def computeChatData():
+    print("Computing Chat Data")
+
+
+while(True):
+    print("1: Get Chat Data\n2: Download YouTube Video\n3: Compute Chat Data")
+    choice = (int(input("Please pick a number: ")))
+    if(choice == 1):
+        if(choiceOneBuffer):
+            print("Already downloading chat data")
+        else:
+            #test = "PASSED AN ARG"
+            #Thread1 = threading.Thread(target=getChatData, args=(test, ))
+            Thread1 = threading.Thread(target=getChatData)
+            Thread1.start()
 
 
 
-def makeButton(text, command):
-    return Button(window, text=text, command=command)
-
-def submit():
-    print("Hello World")
-
-def download():
-    print("Downloading Video")
-
-def editor():
-    print("Editing Video")
-
-def data():
-    print("Viewing Data")
-
-def computeChat():
-    print("Computing Chat")
 
 
-window = Tk(className="youTube Chat Data")
-window.geometry("750x750")
 
-chatEntry = Entry(window)
-chatEntry.pack()
-
-getChat_button = makeButton("Get Chat", submit)
-getChat_button.pack()
-
-videoEntry = Entry(window)
-videoEntry.pack()
-
-downloadVideo_button = makeButton("Download Video", download)
-downloadVideo_button.pack()
-
-
-scale = Scale(
-    window,
-    from_= 0,
-    to= 190,
-    length=400,
-    orient=HORIZONTAL,
-    tickinterval=20,
-    resolution=10,
-)
-scale.pack()
-
-
-computeChat_button = makeButton("Compute Chat", computeChat)
-computeChat_button.pack()
-
-
-editor_button = makeButton("View Data", data)
-editor_button.pack()
-
-
-editor_button = makeButton("Trim Video", editor)
-editor_button.pack()
-
-window.mainloop()

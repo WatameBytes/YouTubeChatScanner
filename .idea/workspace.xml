@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a66727e-0df2-4734-8e80-3437702493d8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Notes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project/CollectChat/chatScan.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RunYTDLP.py" beforeDir="false" afterPath="$PROJECT_DIR$/RunYTDLP.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ytDownload.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ytDownload.sh" afterDir="false" />
     </list>
@@ -216,8 +219,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.Main" />
         <item itemvalue="Python.RunYTDLP" />
+        <item itemvalue="Python.Main" />
         <item itemvalue="Python.MainInheritance" />
         <item itemvalue="Python.OOPExample" />
       </list>
@@ -235,7 +238,7 @@
       <workItem from="1657066809660" duration="370000" />
       <workItem from="1657067234095" duration="1796000" />
       <workItem from="1657069846471" duration="16767000" />
-      <workItem from="1657138604647" duration="2814000" />
+      <workItem from="1657138604647" duration="11084000" />
     </task>
     <servers />
   </component>
@@ -257,9 +260,9 @@
     <SUITE FILE_PATH="coverage/julyProject$fileDialogWithSave.coverage" NAME="fileDialogWithSave Coverage Results" MODIFIED="1657060987146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TkinterPlayground" />
     <SUITE FILE_PATH="coverage/julyProject$radioButtons.coverage" NAME="radioButtons Coverage Results" MODIFIED="1657064252774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TkinterPlayground" />
     <SUITE FILE_PATH="coverage/julyProject$windows.coverage" NAME="windows Coverage Results" MODIFIED="1657064268208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TkinterPlayground" />
-    <SUITE FILE_PATH="coverage/julyProject$Main.coverage" NAME="Main Coverage Results" MODIFIED="1657135377871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/YouTubeToData" />
+    <SUITE FILE_PATH="coverage/julyProject$Main.coverage" NAME="Main Coverage Results" MODIFIED="1657159948933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/YouTubeToData" />
     <SUITE FILE_PATH="coverage/julyProject$main.coverage" NAME="main Coverage Results" MODIFIED="1657066020884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/julyProject$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1657065132643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Two functions simultaneously" />
+    <SUITE FILE_PATH="coverage/julyProject$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1657181728437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project" />
     <SUITE FILE_PATH="coverage/julyProject$threading__1_.coverage" NAME="threading (1) Coverage Results" MODIFIED="1657065056584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Two functions simultaneously" />
     <SUITE FILE_PATH="coverage/julyProject$OOPExample.coverage" NAME="OOPExample Coverage Results" MODIFIED="1657068322891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonHowTo/oop" />
     <SUITE FILE_PATH="coverage/julyProject$label.coverage" NAME="label Coverage Results" MODIFIED="1657064285019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TkinterPlayground" />
@@ -277,7 +280,7 @@
     <SUITE FILE_PATH="coverage/julyProject$entry.coverage" NAME="entry Coverage Results" MODIFIED="1657065858666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TkinterPlayground" />
     <SUITE FILE_PATH="coverage/julyProject$hello_youtube.coverage" NAME="hello_youtube Coverage Results" MODIFIED="1657066485367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonHowTo/modules" />
     <SUITE FILE_PATH="coverage/julyProject$multiprocessing.coverage" NAME="multiprocessing Coverage Results" MODIFIED="1657064864285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Two functions simultaneously" />
-    <SUITE FILE_PATH="coverage/julyProject$RunYTDLP.coverage" NAME="RunYTDLP Coverage Results" MODIFIED="1657138644250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/julyProject$RunYTDLP.coverage" NAME="RunYTDLP Coverage Results" MODIFIED="1657166107429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/julyProject$multiprocessingExample.coverage" NAME="multiprocessingExample Coverage Results" MODIFIED="1657065181681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Two functions simultaneously" />
   </component>
 </project>
