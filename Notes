@@ -3,3 +3,88 @@ I/O Bound, Fast I/O, Limited Number of Connections => Multi Threading
 I/O Bound, Slow I/O, Many connections => Asyncio
 
 Need FFmpeg in our PATH --> need FFmpeg as an exe
+
+Pass By Value --> A copy is made. The actual value DOES NOT CHANGE
+
+def fun(a):
+    a+=10
+    print("Inside function call",a)
+
+a=20
+print("Before function call",a)
+fun(a)
+print("After function call",a)
+Python
+Copy
+
+Output:
+
+Before function call 20
+Inside function call 30
+After function call 20
+
+======================
+
+Pass By Reference --> The original is passed and the actual value is changed
+
+def fun(a):
+    a.append('i')
+    print("Inside function call",a)
+
+a=['H']
+print("Before function call",a)
+fun(a)
+print("After function call",a)
+Python
+Copy
+
+Output:
+
+Before function call ['H']
+Inside function call ['H', 'i']
+After function call ['H', 'i']
+
+https://pythonguides.com/python-naming-conventions/
+
+Naming a function in Python
+
+Rule-1: Python functions are named in ALL LOWER CASE CHARACTERS
+Rule-2: DO NOT USE UPPERCASE CHARACTERS
+Rule-3: UNDERSCORE(_) between words instead of space
+
+Naming a variable in Python
+1. Start with an alpabet or underscore
+2. Contains A-Z, a-z, 0-9, abd underscore
+3. DON'T START WITH A NUMBER
+4. DON'T USE SPECIAL CHARACTERS
+5. CASE SENSITIVE
+6. DON'T USE RESERVE KEYWORDS
+
+Naming a CLASS IN PYTHON
+1. CamelCase
+2. When writing an classes for an exception --> name should end with "Error"
+
+
+File Name in Python
+1. Short name
+2. lowercase
+3. underscores are allowed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

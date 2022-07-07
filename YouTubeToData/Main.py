@@ -9,8 +9,8 @@ if __name__ == '__main__':
     main()
 
 # Logic for the program [Documentation]
-# Main.py --> _Gui.py
-# Main.py: Main method that calls _Gui.py
+# MainProgram.py --> _Gui.py
+# MainProgram.py: Main method that calls _Gui.py
 # _Gui.py --> _CollectChat
 # _Gui.py collects data that user inputs and sends it to _CollectChat
 # _CollectChat.py --> _GetDataAndStars [Made it a class to send multiple things]
