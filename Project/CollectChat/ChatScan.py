@@ -89,7 +89,7 @@ def youtubeVideoLinkParser():
         print(pychatError)
 
     except:
-        print("Wildcard Error Occured")
+        print("Wildcard Error Occurred")
 
 def fileNameParser():
     global isKick

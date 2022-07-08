@@ -66,7 +66,7 @@
       <recent name="C:\Users\Arisa\PycharmProjects\julyProject\PythonHowTo\modules" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.RunYTDLP">
+  <component name="RunManager" selected="Python.MainProgram (1)">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="julyProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -201,8 +201,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.RunYTDLP" />
         <item itemvalue="Python.MainProgram (1)" />
+        <item itemvalue="Python.RunYTDLP" />
         <item itemvalue="Python.Main" />
         <item itemvalue="Python.MainInheritance" />
         <item itemvalue="Python.OOPExample" />
