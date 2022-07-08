@@ -3,7 +3,7 @@ import time
 
 from CollectChat import ChatScan
 from DownloadVideo import RunDownloader
-from Project.Utilities import PrintFunctions
+from Utilities import PrintFunctions
 
 def download_video():
     print("Downloading YouTube Video")

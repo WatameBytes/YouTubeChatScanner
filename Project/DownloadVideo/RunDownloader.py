@@ -4,9 +4,12 @@ import os
 
 videoLink = None
 title = None
-videoDownloadFolder = './VideosDownloaded'
+videoDownloadFolder = './VideosDownloaded\\'
 prefix = "https://www.youtube.com/watch?v="
-os.chdir(videoDownloadFolder)
+#os.chdir(videoDownloadFolder)
+print(os.getcwd())
+
+print(os.getcwd())
 
 def prerequisite_checklist():
     global videoLink, title, prefix
@@ -19,8 +22,6 @@ def prerequisite_checklist():
         print("Title of the Video {}".format(title))
         Thread = threading.Thread(target=downloadScript, args=(videoLink, title))
         Thread.start()
-
-        print("Finished downloading")
     except:
         print("An exception has occurred!")
 
@@ -56,4 +57,9 @@ def getUserInput():
     return False
 
 def downloadScript(videoLink, title):
+    oldDir = os.getcwd()
+
+    os.chdir("./VideosDownloaded")
+
     os.system("ytDownload.sh {} {}".format(videoLink, title))
+    os.chdir(oldDir)
