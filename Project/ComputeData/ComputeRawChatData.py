@@ -1,3 +1,5 @@
+import os
+import shutil
 from itertools import islice
 
 originalDict = dict()
@@ -23,11 +25,25 @@ def DataCompute():
 
     for index, value in enumerate(listOfContents):
         print("\t[{}]: {}".format(index, value))
+    i = None
 
-    i = input("Please select the text-file you want to compute: ")
+    try:
+        i = input("Please select the text-file you want to compute: ")
+    except:
+        print("An exception was found!")
+        return
+    File = None
 
-    File = open(HelperFunctions.RawChatDataDir + "\\" + listOfContents[int(i)], "r")
+    try:
+        File = open(HelperFunctions.RawChatDataDir + "\\" + listOfContents[int(i)], "r")
+    except:
+        print("{} isn't a valid choice".format(i))
+        return
+
     timeToDict(File)
+
+    file_name = os.path.basename(HelperFunctions.RawChatDataDir + "\\" + listOfContents[int(i)])
+    strippedFileName = file_name.split("_")[0]
 
     copyOrgignalToNew(originalDict, newDict, 20)
 
@@ -43,9 +59,11 @@ def DataCompute():
     copyOrgignalToNew(originalDict, _190SplitDict, 190)
 
     # Empties the file
-    with open(File.name + '_StarData.txt', 'w'): pass
+    with open(HelperFunctions.ComputedDataDir + '/' + strippedFileName +'_ComputedData.txt', 'w'): pass
+    starData = open(HelperFunctions.ComputedDataDir + '/' + strippedFileName + '_ComputedData.txt', 'a')
 
-    starData = open(File.name + '_StarData.txt', 'a')
+    # with open(HelperFunctions.ComputedDataDir + '/' + strippedFileName + '_ComputedData.txt', 'w'): pass
+    # starData = open(HelperFunctions.ComputedDataDir + '/' + strippedFileName + '/_ComputedData.txt', 'a')
 
     writeToData(starData, newDict, 'orginal')
     writeToData(starData, _10SplitDict, '10')
@@ -59,7 +77,7 @@ def DataCompute():
     writeToData(starData, _170SplitDict, '170')
     writeToData(starData, _190SplitDict, '190')
 
-    print('{} has finished computing'.format(starData))
+    print('{} has finished computing'.format(File))
 
 def timeToDict(file):
     # Loop through each line of the file
