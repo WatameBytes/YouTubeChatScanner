@@ -5,10 +5,9 @@ import os
 import pytchat
 import json
 
-from pathlib import Path
+from Project.Utilities import HelperFunctions
 
-# from Project.Utilities.PrintFunctions import print_current_queue
-from os.path import exists
+
 
 videoId = int()
 chat = None
@@ -102,9 +101,9 @@ def fileNameParser():
 
         if (nameOfTextFile == "list"):
             res = []
-            for rawDataPath in os.listdir(rawDataFolder):
-                if (os.path.isfile(os.path.join(rawDataFolder, rawDataPath))):
-                    res.append(rawDataPath + ".txt")
+            for rawDataFile in os.listdir(HelperFunctions.RawChatDataDir):
+                if (os.path.isfile(os.path.join(HelperFunctions.RawChatDataDir, rawDataFile))):
+                    res.append(rawDataFile + ".txt")
             print(res)
             continue
 

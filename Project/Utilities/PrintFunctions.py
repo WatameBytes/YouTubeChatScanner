@@ -1,6 +1,16 @@
 # List the choices the user can type
+
+
 def print_list_of_choices():
-    print("1: Get Chat Data\n2: Download YouTube Video\n3: Compute Chat Data\n4: Exit\n5: Current Threads")
+    print(
+        "1: Get Chat Data\n"
+        "2: Download YouTube Video\n"
+        "3: Compute Chat Data\n"
+        "4: Exit\n"
+        "5: Current Threads\n"
+        "6: List Contents\n"
+        "7: Compute Data\n"
+    )
 
 
 # Print out what the program is currently working on
