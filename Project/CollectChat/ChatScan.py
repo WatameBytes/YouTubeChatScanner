@@ -100,11 +100,13 @@ def fileNameParser():
         nameOfTextFile = input("Name the file, type 'list' to view all the current files, or type 'return' to leave: ")
 
         if (nameOfTextFile == "list"):
-            res = []
-            for rawDataFile in os.listdir(HelperFunctions.RawChatDataDir):
-                if (os.path.isfile(os.path.join(HelperFunctions.RawChatDataDir, rawDataFile))):
-                    res.append(rawDataFile + ".txt")
-            print(res)
+            HelperFunctions.printContents(HelperFunctions.RawChatDataDir, ".txt", "[RAW] Chat Data: ")
+            # res = []
+            # for rawDataFile in os.listdir(HelperFunctions.RawChatDataDir):
+            #     if (os.path.isfile(os.path.join(HelperFunctions.RawChatDataDir, rawDataFile))):
+            #         res.append(rawDataFile + ".txt")
+            # print(res)
+
             continue
 
         elif (checkIfEmpty(nameOfTextFile, "Please enter a file name!") or nameOfTextFile == "return"):
@@ -117,4 +119,4 @@ def fileNameParser():
 
         break
 
-    fileInstance = open(rawDataFolder + nameOfTextFile, 'w')
+    fileInstance = open(rawDataFolder + nameOfTextFile + "_ChatData.txt", 'w')

@@ -38,8 +38,8 @@ while(True):
             print("Number of jobs running: {}".format(threading.active_count() - 1))
 
         elif(choice == 6):
-            HelperFunctions.printContents(HelperFunctions.RawChatDataDir, False, "Chat Data: ")
-            HelperFunctions.printContents(HelperFunctions.VideoDownloadedDir, True, "Video Content: ")
+            HelperFunctions.printContents(HelperFunctions.RawChatDataDir, ".txt", "[RAW] Chat Data: ")
+            HelperFunctions.printContents(HelperFunctions.VideoDownloadedDir, ".mp4", "Video Content: ")
 
         elif(choice == 7):
             ComputeRawChatData.DataCompute()

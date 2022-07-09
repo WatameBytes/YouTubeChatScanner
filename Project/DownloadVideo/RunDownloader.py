@@ -30,11 +30,7 @@ def getUserInput():
         videoLink = input("Enter the YouTube URL you want to download, type 'list' to see downloaded videos, or type 'return' to leave: ")
 
         if(videoLink == "list"):
-            listOfVideos = []
-            for i in os.listdir():
-                if i.endswith(".mp4"):
-                    listOfVideos.append(i)
-            print(listOfVideos)
+            HelperFunctions.printContents(HelperFunctions.VideoDownloadedDir, ".mp4", "Video Content: ")
             continue
 
         if(videoLink == "return" or not videoLink.startswith(prefix)):
@@ -51,6 +47,7 @@ def getUserInput():
                 continue
             return True
         break
+
     return False
 
 def downloadScript(videoLink, title):
