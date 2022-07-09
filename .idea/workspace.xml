@@ -3,12 +3,51 @@
   <component name="ChangeListManager">
     <list default="true" id="4a66727e-0df2-4734-8e80-3437702493d8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/ComputeData/ComputeRawChatData.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project/ComputeData/ComputeRawChatData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/RawYoutubeChatData/HappyHalloween_ChatData.txt_StarData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/RawYoutubeChatData/MythOrTreat_ChatData.txt_StarData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/RawYoutubeChatData/Test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/RawYoutubeChatData/Test.txt_StarData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/RawYoutubeChatData/testMe.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/CollectChat/ChatScan.py" beforeDir="false" afterPath="$PROJECT_DIR$/CollectChat/ChatScan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/ComputeData/ComputeRawChatData.py" beforeDir="false" afterPath="$PROJECT_DIR$/ComputeData/ComputeRawChatData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/ComputedData/HappyHalloween_ComputedData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ComputedData/HappyHalloween_ComputedData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/ComputedData/_ComputedData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ComputedData/_ComputedData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/DownloadVideo/RunDownloader.py" beforeDir="false" afterPath="$PROJECT_DIR$/DownloadVideo/RunDownloader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/MainProgram.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainProgram.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/RawYoutubeChatData/HappyHalloween_ChatData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RawYoutubeChatData/HappyHalloween_ChatData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/RawYoutubeChatData/MythOrTreat_ChatData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RawYoutubeChatData/MythOrTreat_ChatData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Utilities/HelperFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities/HelperFunctions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Utilities/PrintFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities/PrintFunctions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/VideosDownloaded/ytDownload.sh" beforeDir="false" afterPath="$PROJECT_DIR$/VideosDownloaded/ytDownload.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonHowTo/Inheritance/MainInheritance.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonHowTo/modules/hello_youtube.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonHowTo/modules/messages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonHowTo/oop/OOPExample.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonHowTo/oop/carFile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonHowTo/oop/product.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RunYTDLP.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/Images/barbara.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/Images/ganyu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/Images/yanfei.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/WatsonMyth_StarData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/buttons.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/checkbutton.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/entry.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/fileDialog.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/fileDialogWithSave.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/label.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/listbox.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/menuBar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/messageBox.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/radioButtons.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/scale.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/textArea.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TkinterPlayground/windows.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Two functions simultaneously/CustomThreadFile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Two functions simultaneously/asyncioExample.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Two functions simultaneously/multiprocessingExample.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Two functions simultaneously/threadingExample.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/Main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/_CollectChat.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/_GetDataAndStars.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/YouTubeToData/_Gui.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ytDownload.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ytDownload.sh.bak" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,15 +64,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/PythonHowTo/Inheritance/MainInheritance.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PythonHowTo/modules/hello_youtube.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PythonHowTo/modules/messages.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PythonHowTo/oop/OOPExample.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PythonHowTo/oop/carFile.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PythonHowTo/oop/product.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/RunYTDLP.py" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -43,14 +73,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Arisa/PycharmProjects/julyProject/Project/VideosDownloaded&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;discord-application&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Arisa/Desktop/Project",
+    "settings.editor.selected.configurable": "discord-application"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Arisa\PycharmProjects\julyProject\Project\VideosDownloaded" />
@@ -58,11 +88,11 @@
       <recent name="C:\Users\Arisa\PycharmProjects\julyProject" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Arisa\PycharmProjects\julyProject" />
       <recent name="C:\Users\Arisa\PycharmProjects\julyProject\Project\VideosDownloaded" />
       <recent name="C:\Users\Arisa\PycharmProjects\julyProject\Project" />
       <recent name="C:\Users\Arisa\PycharmProjects\julyProject\Project\RawYoutubeChatData" />
       <recent name="C:\Users\Arisa\PycharmProjects\julyProject\Project\Utilities" />
-      <recent name="C:\Users\Arisa\PycharmProjects\julyProject" />
     </key>
   </component>
   <component name="RunManager" selected="Python.MainProgram (1)">
@@ -110,7 +140,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="MainProgram (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="MainProgram" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="julyProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -123,7 +153,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project/MainProgram.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Arisa\PycharmProjects\julyProject\MainProgram.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -254,7 +284,7 @@
     <SUITE FILE_PATH="coverage/julyProject$multi__1_.coverage" NAME="multi (1) Coverage Results" MODIFIED="1657064937159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Two functions simultaneously" />
     <SUITE FILE_PATH="coverage/julyProject$async.coverage" NAME="threading Coverage Results" MODIFIED="1657065064728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/julyProject$checkbutton.coverage" NAME="checkbutton Coverage Results" MODIFIED="1657064279881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TkinterPlayground" />
-    <SUITE FILE_PATH="coverage/julyProject$MainProgram__1_.coverage" NAME="MainProgram (1) Coverage Results" MODIFIED="1657407835486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project" />
+    <SUITE FILE_PATH="coverage/julyProject$MainProgram__1_.coverage" NAME="MainProgram (1) Coverage Results" MODIFIED="1657408734256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project" />
     <SUITE FILE_PATH="coverage/julyProject$OOPExample__1_.coverage" NAME="OOPExample (1) Coverage Results" MODIFIED="1657067160265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonHowTo/oop" />
     <SUITE FILE_PATH="coverage/julyProject$asyncioExample__1_.coverage" NAME="asyncioExample (1) Coverage Results" MODIFIED="1657065156979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Two functions simultaneously" />
     <SUITE FILE_PATH="coverage/julyProject$listbox.coverage" NAME="listbox Coverage Results" MODIFIED="1657064299131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TkinterPlayground" />
