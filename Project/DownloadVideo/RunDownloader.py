@@ -2,14 +2,15 @@ import os.path
 import threading
 import os
 
+from Project.Utilities.HelperFunctions import getMainDirectory
+
 videoLink = None
 title = None
-videoDownloadFolder = './VideosDownloaded\\'
+videoDownloadFolder = './VideosDownloaded'
 prefix = "https://www.youtube.com/watch?v="
-#os.chdir(videoDownloadFolder)
-print(os.getcwd())
 
-print(os.getcwd())
+mainDirectory = str(getMainDirectory())
+
 
 def prerequisite_checklist():
     global videoLink, title, prefix
@@ -57,9 +58,8 @@ def getUserInput():
     return False
 
 def downloadScript(videoLink, title):
-    oldDir = os.getcwd()
-
-    os.chdir("./VideosDownloaded")
+    os.chdir(mainDirectory)
+    #os.chdir("./VideosDownloaded")
+    os.chdir(videoDownloadFolder)
 
     os.system("ytDownload.sh {} {}".format(videoLink, title))
-    os.chdir(oldDir)
