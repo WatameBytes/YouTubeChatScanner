@@ -2,14 +2,11 @@ import os.path
 import threading
 import os
 
+from Project.Utilities import HelperFunctions
+
 videoLink = None
 title = None
-videoDownloadFolder = './VideosDownloaded\\'
 prefix = "https://www.youtube.com/watch?v="
-#os.chdir(videoDownloadFolder)
-print(os.getcwd())
-
-print(os.getcwd())
 
 def prerequisite_checklist():
     global videoLink, title, prefix
@@ -33,11 +30,7 @@ def getUserInput():
         videoLink = input("Enter the YouTube URL you want to download, type 'list' to see downloaded videos, or type 'return' to leave: ")
 
         if(videoLink == "list"):
-            listOfVideos = []
-            for i in os.listdir():
-                if i.endswith(".mp4"):
-                    listOfVideos.append(i)
-            print(listOfVideos)
+            HelperFunctions.printContents(HelperFunctions.VideoDownloadedDir, ".mp4", "Video Content: ")
             continue
 
         if(videoLink == "return" or not videoLink.startswith(prefix)):
@@ -54,12 +47,11 @@ def getUserInput():
                 continue
             return True
         break
+
     return False
 
 def downloadScript(videoLink, title):
-    oldDir = os.getcwd()
-
-    os.chdir("./VideosDownloaded")
+    os.chdir(HelperFunctions.MainDirectory)
+    os.chdir(HelperFunctions.VideoDownloadedDir)
 
     os.system("ytDownload.sh {} {}".format(videoLink, title))
-    os.chdir(oldDir)
