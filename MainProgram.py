@@ -1,5 +1,6 @@
 import os
 import threading
+import subprocess
 
 from CollectChat import ChatScan
 from DownloadVideo import RunDownloader
@@ -43,6 +44,9 @@ while(True):
 
         elif(choice == 7):
             ComputeRawChatData.DataCompute()
+
+        elif(choice == 8):
+            subprocess.Popen('explorer {}'.format(HelperFunctions.MainDirectory))
 
         else:
             PrintFunctions.print_improper_choice()
