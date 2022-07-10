@@ -61,9 +61,6 @@ def DataCompute():
     with open(HelperFunctions.ComputedDataDir + '/' + strippedFileName + '_ComputedData.txt', 'w'): pass
     starData = open(HelperFunctions.ComputedDataDir + '/' + strippedFileName + '_ComputedData.txt', 'a')
 
-    # with open(HelperFunctions.ComputedDataDir + '/' + strippedFileName + '_ComputedData.txt', 'w'): pass
-    # starData = open(HelperFunctions.ComputedDataDir + '/' + strippedFileName + '/_ComputedData.txt', 'a')
-
     writeToData(starData, newDict, 'orginal')
     writeToData(starData, _10SplitDict, '10')
     writeToData(starData, _30SplitDict, '30')
@@ -116,21 +113,6 @@ def chunks(data, SIZE=1000000):
     for i in range(0, len(data), SIZE):
         yield {k: data[k] for k in islice(it, SIZE)}
 
-
-# def declareDics(self):
-#     self.originalDict = dict()
-#     self._10SplitDict = dict()
-#     self._30SplitDict = dict()
-#     self._50SplitDict = dict()
-#     self._70SplitDict = dict()
-#     self._90SplitDict = dict()
-#     self._110SplitDict = dict()
-#     self._130SplitDict = dict()
-#     self._150SplitDict = dict()
-#     self._170SplitDict = dict()
-#     self._190SplitDict = dict()
-
-
 # Looks to see of the first character is a negative sign
 def check_negative_sign(s):
     if(s[0] == '-'):
@@ -165,21 +147,8 @@ def writeToData(starData, newDict, nameOfDict):
     dic2 = dict(sorted(newDict.items(), key=lambda x: x[1]))
     try:
         starData.write("___HHMMSS\n")
-        starData.write(("1st: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-1], list(dic2.values())[-1])))
-        starData.write(("2nd: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-2], list(dic2.values())[-2])))
-        starData.write(("3rd: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-3], list(dic2.values())[-3])))
-        starData.write(("4th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-4], list(dic2.values())[-4])))
-        starData.write(("5th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-5], list(dic2.values())[-5])))
-        starData.write(("6th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-6], list(dic2.values())[-6])))
-        starData.write(("7th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-7], list(dic2.values())[-7])))
-        starData.write(("8th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-8], list(dic2.values())[-8])))
-        starData.write(("9th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-9], list(dic2.values())[-9])))
-        starData.write(("10th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-10], list(dic2.values())[-10])))
-        starData.write(("11th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-11], list(dic2.values())[-11])))
-        starData.write(("12th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-12], list(dic2.values())[-12])))
-        starData.write(("13th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-13], list(dic2.values())[-13])))
-        starData.write(("14th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-14], list(dic2.values())[-14])))
-        starData.write(("15th: {}\t*:{}\tHH:MM:SS\n".format(list(dic2)[-15], list(dic2.values())[-15])))
+        for i in range(-1, -31, -1):
+            starData.write(("{}:\t{}\t*:{}\tHH:MM:SS\n".format(abs(i) ,list(dic2)[i], list(dic2.values())[i])))
 
     except:
         pass

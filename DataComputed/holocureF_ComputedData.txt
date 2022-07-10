@@ -1,0 +1,220 @@
+orginal splitter___HHMMSS
+1st: 1:10:50	*:246	HH:MM:SS
+2nd: 2:30	*:227	HH:MM:SS
+3rd: 1:11:30	*:226	HH:MM:SS
+4th: 10:57	*:225	HH:MM:SS
+5th: 33:56	*:223	HH:MM:SS
+6th: 1:15:32	*:222	HH:MM:SS
+7th: 1:13:11	*:221	HH:MM:SS
+8th: 37:50	*:208	HH:MM:SS
+9th: 20:23	*:207	HH:MM:SS
+10th: 22:26	*:206	HH:MM:SS
+11th: 1:10:30	*:205	HH:MM:SS
+12th: 1:05:20	*:204	HH:MM:SS
+13th: 1:09:05	*:201	HH:MM:SS
+14th: 1:10:08	*:200	HH:MM:SS
+15th: 44:22	*:199	HH:MM:SS
+Avg: 135.4742268041237
+
+============================================
+
+10 splitter___HHMMSS
+1st: 2:30	*:138	HH:MM:SS
+2nd: 1:11:00	*:128	HH:MM:SS
+3rd: 1:11:30	*:126	HH:MM:SS
+4th: 1:09:16	*:126	HH:MM:SS
+5th: 22:26	*:125	HH:MM:SS
+6th: 10:57	*:124	HH:MM:SS
+7th: 1:13:21	*:121	HH:MM:SS
+8th: 1:15:43	*:119	HH:MM:SS
+9th: 1:10:50	*:118	HH:MM:SS
+10th: 1:10:20	*:118	HH:MM:SS
+11th: 1:05:10	*:117	HH:MM:SS
+12th: 22:16	*:117	HH:MM:SS
+13th: 0:16	*:115	HH:MM:SS
+14th: 38:00	*:113	HH:MM:SS
+15th: 44:32	*:112	HH:MM:SS
+Avg: 77.79669762641899
+
+============================================
+
+30 splitter___HHMMSS
+1st: 1:10:40	*:354	HH:MM:SS
+2nd: 2:10	*:321	HH:MM:SS
+3rd: 1:13:11	*:319	HH:MM:SS
+4th: 20:23	*:313	HH:MM:SS
+5th: 10:47	*:306	HH:MM:SS
+6th: 1:15:43	*:305	HH:MM:SS
+7th: 1:11:10	*:305	HH:MM:SS
+8th: 21:56	*:302	HH:MM:SS
+9th: 18:53	*:301	HH:MM:SS
+10th: 19:53	*:298	HH:MM:SS
+11th: 1:10:08	*:297	HH:MM:SS
+12th: 22:56	*:293	HH:MM:SS
+13th: 1:09:05	*:291	HH:MM:SS
+14th: 37:50	*:290	HH:MM:SS
+15th: 1:05:31	*:286	HH:MM:SS
+Avg: 193.39009287925697
+
+============================================
+
+50 splitter___HHMMSS
+1st: 1:10:40	*:533	HH:MM:SS
+2nd: 1:48	*:517	HH:MM:SS
+3rd: 22:06	*:475	HH:MM:SS
+4th: 20:23	*:469	HH:MM:SS
+5th: 1:15:43	*:463	HH:MM:SS
+6th: 1:11:30	*:463	HH:MM:SS
+7th: 18:43	*:462	HH:MM:SS
+8th: 19:33	*:457	HH:MM:SS
+9th: 1:13:11	*:455	HH:MM:SS
+10th: 2:40	*:454	HH:MM:SS
+11th: 47:10	*:452	HH:MM:SS
+12th: 0:57	*:444	HH:MM:SS
+13th: 1:09:47	*:441	HH:MM:SS
+14th: 22:56	*:439	HH:MM:SS
+15th: 1:08:55	*:433	HH:MM:SS
+Avg: 308.6855670103093
+
+============================================
+
+70 splitter___HHMMSS
+1st: 1:10:50	*:741	HH:MM:SS
+2nd: 2:30	*:671	HH:MM:SS
+3rd: 1:17	*:661	HH:MM:SS
+4th: 1:09:36	*:655	HH:MM:SS
+5th: 19:03	*:648	HH:MM:SS
+6th: 21:26	*:646	HH:MM:SS
+7th: 1:15:32	*:643	HH:MM:SS
+8th: 20:13	*:632	HH:MM:SS
+9th: 1:04:48	*:629	HH:MM:SS
+10th: 33:16	*:627	HH:MM:SS
+11th: 1:13:11	*:598	HH:MM:SS
+12th: 17:53	*:596	HH:MM:SS
+13th: 22:36	*:592	HH:MM:SS
+14th: 10:47	*:590	HH:MM:SS
+15th: 14:18	*:585	HH:MM:SS
+Avg: 422.9136690647482
+
+============================================
+
+90 splitter___HHMMSS
+1st: 1:10:40	*:931	HH:MM:SS
+2nd: 1:38	*:869	HH:MM:SS
+3rd: 1:09:05	*:838	HH:MM:SS
+4th: 19:53	*:833	HH:MM:SS
+5th: 21:26	*:799	HH:MM:SS
+6th: 1:04:23	*:794	HH:MM:SS
+7th: 18:23	*:793	HH:MM:SS
+8th: 3:12	*:785	HH:MM:SS
+9th: 1:15:11	*:781	HH:MM:SS
+10th: 0:05	*:774	HH:MM:SS
+11th: 10:47	*:759	HH:MM:SS
+12th: 1:12:10	*:747	HH:MM:SS
+13th: 22:56	*:739	HH:MM:SS
+14th: 32:04	*:730	HH:MM:SS
+15th: 13:47	*:688	HH:MM:SS
+Avg: 538.5648148148148
+
+============================================
+
+110 splitter___HHMMSS
+1st: 1:09:05	*:1064	HH:MM:SS
+2nd: 1:58	*:1037	HH:MM:SS
+3rd: 18:43	*:1015	HH:MM:SS
+4th: 1:11:00	*:974	HH:MM:SS
+5th: 0:05	*:967	HH:MM:SS
+6th: 20:33	*:960	HH:MM:SS
+7th: 22:26	*:951	HH:MM:SS
+8th: 1:12:51	*:924	HH:MM:SS
+9th: 3:52	*:903	HH:MM:SS
+10th: 1:14:41	*:892	HH:MM:SS
+11th: 1:05:20	*:881	HH:MM:SS
+12th: 47:10	*:872	HH:MM:SS
+13th: 16:52	*:859	HH:MM:SS
+14th: 31:44	*:858	HH:MM:SS
+15th: 37:30	*:848	HH:MM:SS
+Avg: 649.2696629213483
+
+============================================
+
+130 splitter___HHMMSS
+1st: 1:10:20	*:1286	HH:MM:SS
+2nd: 2:20	*:1186	HH:MM:SS
+3rd: 19:53	*:1157	HH:MM:SS
+4th: 0:05	*:1154	HH:MM:SS
+5th: 22:06	*:1148	HH:MM:SS
+6th: 17:43	*:1116	HH:MM:SS
+7th: 1:12:30	*:1053	HH:MM:SS
+8th: 1:14:41	*:1019	HH:MM:SS
+9th: 1:08:04	*:1019	HH:MM:SS
+10th: 1:03:33	*:1014	HH:MM:SS
+11th: 13:17	*:1004	HH:MM:SS
+12th: 8:57	*:991	HH:MM:SS
+13th: 37:40	*:990	HH:MM:SS
+14th: 46:46	*:981	HH:MM:SS
+15th: 1:05:52	*:977	HH:MM:SS
+Avg: 766.7333333333333
+
+============================================
+
+150 splitter___HHMMSS
+1st: 0:05	*:1380	HH:MM:SS
+2nd: 1:10:40	*:1359	HH:MM:SS
+3rd: 17:53	*:1341	HH:MM:SS
+4th: 20:23	*:1334	HH:MM:SS
+5th: 2:40	*:1269	HH:MM:SS
+6th: 1:08:04	*:1234	HH:MM:SS
+7th: 1:13:11	*:1194	HH:MM:SS
+8th: 1:05:31	*:1175	HH:MM:SS
+9th: 10:17	*:1146	HH:MM:SS
+10th: 22:56	*:1129	HH:MM:SS
+11th: 15:18	*:1118	HH:MM:SS
+12th: 30:34	*:1109	HH:MM:SS
+13th: 7:46	*:1094	HH:MM:SS
+14th: 12:47	*:1089	HH:MM:SS
+15th: 35:43	*:1088	HH:MM:SS
+Avg: 881.6153846153846
+
+============================================
+
+170 splitter___HHMMSS
+1st: 0:05	*:1549	HH:MM:SS
+2nd: 20:13	*:1532	HH:MM:SS
+3rd: 1:08:15	*:1517	HH:MM:SS
+4th: 17:22	*:1468	HH:MM:SS
+5th: 1:11:10	*:1460	HH:MM:SS
+6th: 3:01	*:1428	HH:MM:SS
+7th: 31:44	*:1348	HH:MM:SS
+8th: 1:05:20	*:1343	HH:MM:SS
+9th: 1:14:01	*:1329	HH:MM:SS
+10th: 14:28	*:1315	HH:MM:SS
+11th: 8:47	*:1304	HH:MM:SS
+12th: 37:40	*:1243	HH:MM:SS
+13th: 23:06	*:1234	HH:MM:SS
+14th: 46:32	*:1209	HH:MM:SS
+15th: 1:02:23	*:1186	HH:MM:SS
+Avg: 1002.5438596491229
+
+============================================
+
+190 splitter___HHMMSS
+1st: 1:09:36	*:1747	HH:MM:SS
+2nd: 0:05	*:1737	HH:MM:SS
+3rd: 19:23	*:1736	HH:MM:SS
+4th: 1:12:51	*:1555	HH:MM:SS
+5th: 3:22	*:1516	HH:MM:SS
+6th: 16:12	*:1493	HH:MM:SS
+7th: 1:06:23	*:1448	HH:MM:SS
+8th: 12:57	*:1439	HH:MM:SS
+9th: 1:03:03	*:1419	HH:MM:SS
+10th: 32:16	*:1416	HH:MM:SS
+11th: 22:36	*:1407	HH:MM:SS
+12th: 9:47	*:1393	HH:MM:SS
+13th: 35:32	*:1358	HH:MM:SS
+14th: 6:35	*:1314	HH:MM:SS
+15th: 59:44	*:1230	HH:MM:SS
+Avg: 1118.137254901961
+
+============================================
+
