@@ -13,7 +13,8 @@ listOfDicts = []
 for i in range(len(splitValues)):
     listOfDicts.append(dict())
 
-def DataCompute():
+
+def DataProcessing():
     listOfContents = HelperFunctions.getContents(HelperFunctions.RawChatDataDir, ".txt")
 
     for index, value in enumerate(listOfContents):
@@ -31,6 +32,8 @@ def DataCompute():
     except:
         print("{} isn't a valid choice".format(i))
         return
+
+
 
     convertRawTimeDataToDictionary(File)
 
@@ -106,12 +109,6 @@ def writeResultsToFile(starData, newDict, nameOfDict):
 
     except:
         pass
-
-    sumOfData = sum(dic2.values())
-    numOfData = len(dic2)
-    avg = (sumOfData / numOfData) + nSplitter
-    starData.write("Avg: {}\n".format(avg))
-    starData.write('\n')
 
     starData.write("============================================\n\n")
 
