@@ -1,37 +1,30 @@
 import os
 from itertools import islice
+from Utilities import HelperFunctions
 
 originalDict = dict()
 newDict = dict()
-nSplitter = 20
 
-_10SplitDict = dict()
-_30SplitDict = dict()
-_50SplitDict = dict()
-_70SplitDict = dict()
-_90SplitDict = dict()
-_110SplitDict = dict()
-_130SplitDict = dict()
-_150SplitDict = dict()
-_170SplitDict = dict()
-_190SplitDict = dict()
+splitValues = [10, 30, 50, 70, 90, 110, 130, 150, 170, 190]
+listOfDicts = []
 
-from Utilities import HelperFunctions
+# for i in splitValues: --> i will be 10, 30, 50, 70, 110
+for i in range(len(splitValues)):
+    listOfDicts.append(dict())
 
 
-def DataCompute():
+def DataProcessing():
     listOfContents = HelperFunctions.getContents(HelperFunctions.RawChatDataDir, ".txt")
 
     for index, value in enumerate(listOfContents):
         print("\t[{}]: {}".format(index, value))
-    i = None
 
     try:
         i = input("Please select the text-file you want to compute: ")
     except:
         print("An exception was found!")
         return
-    File = None
+
 
     try:
         File = open(HelperFunctions.RawChatDataDir + "\\" + listOfContents[int(i)], "r")
@@ -39,43 +32,31 @@ def DataCompute():
         print("{} isn't a valid choice".format(i))
         return
 
-    timeToDict(File)
+
+
+    convertRawTimeDataToDictionary(File)
 
     file_name = os.path.basename(HelperFunctions.RawChatDataDir + "\\" + listOfContents[int(i)])
     strippedFileName = file_name.split("_")[0]
 
     copyOrgignalToNew(originalDict, newDict, 20)
 
-    copyOrgignalToNew(originalDict, _10SplitDict, 10)
-    copyOrgignalToNew(originalDict, _30SplitDict, 30)
-    copyOrgignalToNew(originalDict, _50SplitDict, 50)
-    copyOrgignalToNew(originalDict, _70SplitDict, 70)
-    copyOrgignalToNew(originalDict, _90SplitDict, 90)
-    copyOrgignalToNew(originalDict, _110SplitDict, 110)
-    copyOrgignalToNew(originalDict, _130SplitDict, 130)
-    copyOrgignalToNew(originalDict, _150SplitDict, 150)
-    copyOrgignalToNew(originalDict, _170SplitDict, 170)
-    copyOrgignalToNew(originalDict, _190SplitDict, 190)
+    for i in range(len(splitValues)):
+        copyOrgignalToNew(originalDict, listOfDicts[i], splitValues[i])
 
     # Empties the file
     with open(HelperFunctions.ComputedDataDir + '/' + strippedFileName + '_ComputedData.txt', 'w'): pass
+
     starData = open(HelperFunctions.ComputedDataDir + '/' + strippedFileName + '_ComputedData.txt', 'a')
 
-    writeToData(starData, newDict, 'orginal')
-    writeToData(starData, _10SplitDict, '10')
-    writeToData(starData, _30SplitDict, '30')
-    writeToData(starData, _50SplitDict, '50')
-    writeToData(starData, _70SplitDict, '70')
-    writeToData(starData, _90SplitDict, '90')
-    writeToData(starData, _110SplitDict, '110')
-    writeToData(starData, _130SplitDict, '130')
-    writeToData(starData, _150SplitDict, '150')
-    writeToData(starData, _170SplitDict, '170')
-    writeToData(starData, _190SplitDict, '190')
+    writeResultsToFile(starData, newDict, 'orginal')
+
+    for i in range(len(splitValues)):
+        writeResultsToFile(starData, listOfDicts[i], str(splitValues[i]))
 
     print('{} has finished computing'.format(strippedFileName+'_ComputedData.txt'))
 
-def timeToDict(file):
+def convertRawTimeDataToDictionary(file):
     # Loop through each line of the file
     for line in file:
         # Remove the leading spaces and newline character
@@ -108,65 +89,54 @@ def printDic(dictionary):
     for x in dictionary.keys():
         print(x)
 
-def chunks(data, SIZE=1000000):
-    it = iter(data)
-    for i in range(0, len(data), SIZE):
-        yield {k: data[k] for k in islice(it, SIZE)}
 
-# Looks to see of the first character is a negative sign
+# Checks to see if the first "number" is a negative
 def check_negative_sign(s):
     if(s[0] == '-'):
         return True
     else:
         return False
 
-def chunks(data, SIZE=1000000):
-    it = iter(data)
-    for i in range(0, len(data), SIZE):
-        yield {k: data[k] for k in islice(it, SIZE)}
+def getSeconds(timestamp):
+    hh, mm, ss = timestamp.split(":")
+    return int(hh) * 3600 + int(mm) * 60 + int(ss)
 
-def printDic(dictionary):
-    for x in dictionary.keys():
-        print(x)
-
-# Copy the values of item into a dictionary we can use for ourselves
-def copyOrgignalToNew(d, newDict, splitter):
-    for item in chunks(d, splitter):
-        # print('Name: ', list(item.keys())[0] ,item, 'sum is ', sum(item.values()))
-        # Key would be the time it starts with the sum of the values between it
-        newDict[list(item.keys())[0]] = sum(item.values())
-
-def chunks(data, SIZE=1000000):
-    it = iter(data)
-    for i in range(0, len(data), SIZE):
-        yield {k: data[k] for k in islice(it, SIZE)}
-
-
-def writeToData(starData, newDict, nameOfDict):
+def writeResultsToFile(starData, newDict, nameOfDict):
     starData.write('{} splitter'.format(nameOfDict))
     dic2 = dict(sorted(newDict.items(), key=lambda x: x[1]))
     try:
         starData.write("___HHMMSS\n")
         for i in range(-1, -31, -1):
-            starData.write(("{}:\t{}\t*:{}\tHH:MM:SS\n".format(abs(i) ,list(dic2)[i], list(dic2.values())[i])))
+            starData.write(("{}:\t{}\t*:{}\tHH:MM:SS\n"
+                .format(
+                    abs(i),
+                    list(dic2)[i],
+                    list(dic2.values())[i],
+                )
+            ))
+
+            starData.write("Time in seconds: {}\n".format(getSeconds(list(dic2)[i])))
+
+
 
     except:
         pass
 
-    sumOfData = sum(dic2.values())
-
-    numOfData = len(dic2)
-    avg = (sumOfData / numOfData) + nSplitter
-    starData.write("Avg: {}\n".format(avg))
-    starData.write('\n')
-
-    # Write to the text file stars :: Perhaps didive by 10 or something to lower it's meaning 270 -> 27 stars
-    # for x, y in newDict.items():
-    #     starData.write(("Start at {} *:{}\t".format(x, y)))
-    #     for n in range(y):
-    #         starData.write(('*'))
-    #     starData.write("\n")
-
     starData.write("============================================\n\n")
 
 
+def printDic(dictionary):
+    for x in dictionary.keys():
+        print(x)
+
+
+# Copy the original dict to a new dictionary, but group them up with a splitter
+def copyOrgignalToNew(d, newDict, splitter):
+    for item in chunks(d, splitter):
+        newDict[list(item.keys())[0]] = sum(item.values())
+
+
+def chunks(data, SIZE=1000000):
+    it = iter(data)
+    for i in range(0, len(data), SIZE):
+        yield {k: data[k] for k in islice(it, SIZE)}
