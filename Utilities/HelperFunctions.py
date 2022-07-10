@@ -30,3 +30,11 @@ def getContents(directory, extension):
             listOfContents.append(i)
 
     return listOfContents
+
+
+# Checks to see if the first "number" is a negative
+def check_negative_sign(s):
+    if(s[0] == '-'):
+        return True
+    else:
+        return False

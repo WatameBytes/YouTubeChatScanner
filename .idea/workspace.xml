@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a66727e-0df2-4734-8e80-3437702493d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/VideosDownloaded/Editor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ComputeData/ComputeRawChatData.py" beforeDir="false" afterPath="$PROJECT_DIR$/ComputeData/ComputeRawChatData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataComputed/guraFish_ComputedData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DataComputed/guraFish_ComputedData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utilities/HelperFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities/HelperFunctions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataComputed/holocureF_ComputedData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DataComputed/holocureF_ComputedData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainProgram.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainProgram.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +55,7 @@
       <recent name="C:\Users\Arisa\PycharmProjects\julyProject\Project\RawYoutubeChatData" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Editor">
+  <component name="RunManager" selected="Python.MainProgram (1)">
     <configuration name="Editor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="julyProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,8 +168,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Editor" />
         <item itemvalue="Python.MainProgram (1)" />
+        <item itemvalue="Python.Editor" />
         <item itemvalue="Python.PandasPlayground" />
         <item itemvalue="Python.MainProgram (1)" />
         <item itemvalue="Python.RunYTDLP" />
@@ -192,7 +193,8 @@
       <workItem from="1657246662043" duration="4696000" />
       <workItem from="1657399624309" duration="6835000" />
       <workItem from="1657409156652" duration="716000" />
-      <workItem from="1657437618226" duration="5535000" />
+      <workItem from="1657437618226" duration="6174000" />
+      <workItem from="1657490304994" duration="4243000" />
     </task>
     <servers />
   </component>
@@ -225,7 +227,7 @@
     <SUITE FILE_PATH="coverage/julyProject$async.coverage" NAME="threading Coverage Results" MODIFIED="1657065064728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/julyProject$PandasPlayground.coverage" NAME="PandasPlayground Coverage Results" MODIFIED="1657441510101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ComputeData" />
     <SUITE FILE_PATH="coverage/julyProject$checkbutton.coverage" NAME="checkbutton Coverage Results" MODIFIED="1657064279881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TkinterPlayground" />
-    <SUITE FILE_PATH="coverage/julyProject$MainProgram__1_.coverage" NAME="MainProgram (1) Coverage Results" MODIFIED="1657442803938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/julyProject$MainProgram__1_.coverage" NAME="MainProgram (1) Coverage Results" MODIFIED="1657494982750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/julyProject$OOPExample__1_.coverage" NAME="OOPExample (1) Coverage Results" MODIFIED="1657067160265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonHowTo/oop" />
     <SUITE FILE_PATH="coverage/julyProject$asyncioExample__1_.coverage" NAME="asyncioExample (1) Coverage Results" MODIFIED="1657065156979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Two functions simultaneously" />
     <SUITE FILE_PATH="coverage/julyProject$listbox.coverage" NAME="listbox Coverage Results" MODIFIED="1657064299131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TkinterPlayground" />

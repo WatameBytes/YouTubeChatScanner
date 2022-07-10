@@ -25,3 +25,8 @@ def print_current_queue(choiceOneBuffer, choiceTwoBuffer, choiceThreeBuffer):
 # If the user types a value not assigned -> Inform the user their choices
 def print_improper_choice():
     print("Improper Choice! Please type 0 to view your options!")
+
+
+def printDic(dictionary):
+    for x in dictionary.keys():
+        print(x)

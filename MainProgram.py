@@ -43,7 +43,7 @@ while(True):
             HelperFunctions.printContents(HelperFunctions.VideoDownloadedDir, ".mp4", "Video Content: ")
 
         elif(choice == 7):
-            ComputeRawChatData.DataProcessing()
+            ComputeRawChatData.dataProcessing()
 
         elif(choice == 8):
             subprocess.Popen('explorer {}'.format(HelperFunctions.MainDirectory))
