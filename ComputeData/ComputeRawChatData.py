@@ -6,17 +6,12 @@ originalDict = dict()
 newDict = dict()
 nSplitter = 20
 
-_10SplitDict = dict()
-_30SplitDict = dict()
-_50SplitDict = dict()
-_70SplitDict = dict()
-_90SplitDict = dict()
-_110SplitDict = dict()
-_130SplitDict = dict()
-_150SplitDict = dict()
-_170SplitDict = dict()
-_190SplitDict = dict()
+splitValues = [10, 30, 50, 70, 90, 110, 130, 150, 170, 190]
+listOfDicts = []
 
+# for i in splitValues: --> i will be 10, 30, 50, 70, 110
+for i in range(len(splitValues)):
+    listOfDicts.append(dict())
 
 def DataCompute():
     listOfContents = HelperFunctions.getContents(HelperFunctions.RawChatDataDir, ".txt")
@@ -44,32 +39,18 @@ def DataCompute():
 
     copyOrgignalToNew(originalDict, newDict, 20)
 
-    copyOrgignalToNew(originalDict, _10SplitDict, 10)
-    copyOrgignalToNew(originalDict, _30SplitDict, 30)
-    copyOrgignalToNew(originalDict, _50SplitDict, 50)
-    copyOrgignalToNew(originalDict, _70SplitDict, 70)
-    copyOrgignalToNew(originalDict, _90SplitDict, 90)
-    copyOrgignalToNew(originalDict, _110SplitDict, 110)
-    copyOrgignalToNew(originalDict, _130SplitDict, 130)
-    copyOrgignalToNew(originalDict, _150SplitDict, 150)
-    copyOrgignalToNew(originalDict, _170SplitDict, 170)
-    copyOrgignalToNew(originalDict, _190SplitDict, 190)
+    for i in range(len(splitValues)):
+        copyOrgignalToNew(originalDict, listOfDicts[i], splitValues[i])
 
     # Empties the file
     with open(HelperFunctions.ComputedDataDir + '/' + strippedFileName + '_ComputedData.txt', 'w'): pass
+
     starData = open(HelperFunctions.ComputedDataDir + '/' + strippedFileName + '_ComputedData.txt', 'a')
 
     writeResultsToFile(starData, newDict, 'orginal')
-    writeResultsToFile(starData, _10SplitDict, '10')
-    writeResultsToFile(starData, _30SplitDict, '30')
-    writeResultsToFile(starData, _50SplitDict, '50')
-    writeResultsToFile(starData, _70SplitDict, '70')
-    writeResultsToFile(starData, _90SplitDict, '90')
-    writeResultsToFile(starData, _110SplitDict, '110')
-    writeResultsToFile(starData, _130SplitDict, '130')
-    writeResultsToFile(starData, _150SplitDict, '150')
-    writeResultsToFile(starData, _170SplitDict, '170')
-    writeResultsToFile(starData, _190SplitDict, '190')
+
+    for i in range(len(splitValues)):
+        writeResultsToFile(starData, listOfDicts[i], str(splitValues[i]))
 
     print('{} has finished computing'.format(strippedFileName+'_ComputedData.txt'))
 
