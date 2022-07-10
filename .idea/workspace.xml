@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a66727e-0df2-4734-8e80-3437702493d8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/VideosDownloaded/Editor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ComputeData/ComputeRawChatData.py" beforeDir="false" afterPath="$PROJECT_DIR$/ComputeData/ComputeRawChatData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataComputed/guraFish_ComputedData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DataComputed/guraFish_ComputedData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainProgram.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainProgram.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utilities/HelperFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities/HelperFunctions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,15 +47,15 @@
       <recent name="C:\Users\Arisa\PycharmProjects\julyProject" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Arisa\PycharmProjects\julyProject\RawYoutubeChatData" />
       <recent name="C:\Users\Arisa\PycharmProjects\julyProject" />
       <recent name="C:\Users\Arisa\PycharmProjects\julyProject\Project\VideosDownloaded" />
       <recent name="C:\Users\Arisa\PycharmProjects\julyProject\Project" />
       <recent name="C:\Users\Arisa\PycharmProjects\julyProject\Project\RawYoutubeChatData" />
-      <recent name="C:\Users\Arisa\PycharmProjects\julyProject\Project\Utilities" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.MainProgram (1)">
-    <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Editor">
+    <configuration name="Editor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="julyProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -62,34 +63,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/YouTubeToData" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/VideosDownloaded" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/YouTubeToData/Main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="MainInheritance" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="julyProject" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PythonHowTo/Inheritance" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PythonHowTo/Inheritance/MainInheritance.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/VideosDownloaded/Editor.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -120,28 +99,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="MainProgram" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="julyProject" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\Arisa\PycharmProjects\julyProject\MainProgram.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="OOPExample" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="julyProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -156,6 +113,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="C:\Users\Arisa\PycharmProjects\julyProject\PythonHowTo\oop\OOPExample.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PandasPlayground" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="julyProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ComputeData" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Arisa\PycharmProjects\julyProject\RawYoutubeChatData\PandasPlayground.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -188,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Editor" />
         <item itemvalue="Python.MainProgram (1)" />
+        <item itemvalue="Python.PandasPlayground" />
         <item itemvalue="Python.MainProgram (1)" />
         <item itemvalue="Python.RunYTDLP" />
-        <item itemvalue="Python.Main" />
-        <item itemvalue="Python.MainInheritance" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +192,7 @@
       <workItem from="1657246662043" duration="4696000" />
       <workItem from="1657399624309" duration="6835000" />
       <workItem from="1657409156652" duration="716000" />
-      <workItem from="1657437618226" duration="2669000" />
+      <workItem from="1657437618226" duration="5535000" />
     </task>
     <servers />
   </component>
@@ -238,13 +217,15 @@
     <SUITE FILE_PATH="coverage/julyProject$Main.coverage" NAME="Main Coverage Results" MODIFIED="1657159948933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/YouTubeToData" />
     <SUITE FILE_PATH="coverage/julyProject$main.coverage" NAME="main Coverage Results" MODIFIED="1657066020884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/julyProject$main__1_.coverage" NAME="MainProgram Coverage Results" MODIFIED="1657236096841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Project" />
+    <SUITE FILE_PATH="coverage/julyProject$Editor.coverage" NAME="Editor Coverage Results" MODIFIED="1657443298014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/VideosDownloaded" />
     <SUITE FILE_PATH="coverage/julyProject$threading__1_.coverage" NAME="threading (1) Coverage Results" MODIFIED="1657065056584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Two functions simultaneously" />
     <SUITE FILE_PATH="coverage/julyProject$OOPExample.coverage" NAME="OOPExample Coverage Results" MODIFIED="1657068322891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonHowTo/oop" />
     <SUITE FILE_PATH="coverage/julyProject$label.coverage" NAME="label Coverage Results" MODIFIED="1657064285019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TkinterPlayground" />
     <SUITE FILE_PATH="coverage/julyProject$multi__1_.coverage" NAME="multi (1) Coverage Results" MODIFIED="1657064937159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Two functions simultaneously" />
     <SUITE FILE_PATH="coverage/julyProject$async.coverage" NAME="threading Coverage Results" MODIFIED="1657065064728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/julyProject$PandasPlayground.coverage" NAME="PandasPlayground Coverage Results" MODIFIED="1657441510101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ComputeData" />
     <SUITE FILE_PATH="coverage/julyProject$checkbutton.coverage" NAME="checkbutton Coverage Results" MODIFIED="1657064279881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TkinterPlayground" />
-    <SUITE FILE_PATH="coverage/julyProject$MainProgram__1_.coverage" NAME="MainProgram (1) Coverage Results" MODIFIED="1657440357286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/julyProject$MainProgram__1_.coverage" NAME="MainProgram (1) Coverage Results" MODIFIED="1657442803938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/julyProject$OOPExample__1_.coverage" NAME="OOPExample (1) Coverage Results" MODIFIED="1657067160265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonHowTo/oop" />
     <SUITE FILE_PATH="coverage/julyProject$asyncioExample__1_.coverage" NAME="asyncioExample (1) Coverage Results" MODIFIED="1657065156979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Two functions simultaneously" />
     <SUITE FILE_PATH="coverage/julyProject$listbox.coverage" NAME="listbox Coverage Results" MODIFIED="1657064299131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TkinterPlayground" />

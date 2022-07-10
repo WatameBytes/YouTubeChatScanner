@@ -2,7 +2,7 @@ import os
 
 MainDirectory = os.getcwd()
 
-RawChatDataDir = MainDirectory + "/RawYouTubeChatData"
+RawChatDataDir = MainDirectory + "\\RawYouTubeChatData"
 VideoDownloadedDir = MainDirectory + "/VideosDownloaded"
 ComputedDataDir = MainDirectory + "/DataComputed"
 

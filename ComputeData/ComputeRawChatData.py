@@ -4,7 +4,6 @@ from Utilities import HelperFunctions
 
 originalDict = dict()
 newDict = dict()
-nSplitter = 20
 
 splitValues = [10, 30, 50, 70, 90, 110, 130, 150, 170, 190]
 listOfDicts = []
@@ -98,6 +97,9 @@ def check_negative_sign(s):
     else:
         return False
 
+def getSeconds(timestamp):
+    hh, mm, ss = timestamp.split(":")
+    return int(hh) * 3600 + int(mm) * 60 + int(ss)
 
 def writeResultsToFile(starData, newDict, nameOfDict):
     starData.write('{} splitter'.format(nameOfDict))
@@ -105,7 +107,17 @@ def writeResultsToFile(starData, newDict, nameOfDict):
     try:
         starData.write("___HHMMSS\n")
         for i in range(-1, -31, -1):
-            starData.write(("{}:\t{}\t*:{}\tHH:MM:SS\n".format(abs(i) ,list(dic2)[i], list(dic2.values())[i])))
+            starData.write(("{}:\t{}\t*:{}\tHH:MM:SS\n"
+                .format(
+                    abs(i),
+                    list(dic2)[i],
+                    list(dic2.values())[i],
+                )
+            ))
+
+            starData.write("Time in seconds: {}\n".format(getSeconds(list(dic2)[i])))
+
+
 
     except:
         pass
