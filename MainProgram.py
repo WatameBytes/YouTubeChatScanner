@@ -16,8 +16,8 @@ while(True):
     #print(os.getcwd())
 
     try:
-        #choice = (int(input("Please pick an option. Type '0' to view your options: ")))
-        choice = 4
+        choice = (int(input("Please pick an option. Type '0' to view your options: ")))
+        #choice = 4
 
         # Display user choices
         if (choice == 0):
@@ -67,6 +67,6 @@ while(True):
         print(e)
         PrintFunctions.print_improper_choice()
 
-    finally:
-        user = input("PLACE HOLDER: WILL INPUT {} AFTER YOU TYPE SOMETHING".format(choice))
+    # finally:
+    #     user = input("PLACE HOLDER: WILL INPUT {} AFTER YOU TYPE SOMETHING".format(choice))
 

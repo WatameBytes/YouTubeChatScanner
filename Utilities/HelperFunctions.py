@@ -8,8 +8,9 @@ MainDirectory = os.getcwd()
 # abs_file_path = os.path.join(script_dir, rel_path)
 
 RawChatDataDir = MainDirectory + "\\RawYouTubeChatData"
-VideoDownloadedDir = MainDirectory + "/VideosDownloaded"
-ComputedDataDir = MainDirectory + "/DataComputed"
+VideoDownloadedDir = MainDirectory + "\\VideosDownloaded"
+ComputedDataDir = MainDirectory + "\\DataComputed"
+ClippedVideo = MainDirectory + "\\ClippedVideos"
 
 def getMainDirectory():
     return os.getcwd()
