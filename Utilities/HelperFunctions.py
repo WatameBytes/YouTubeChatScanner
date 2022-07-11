@@ -48,5 +48,9 @@ def check_negative_sign(s):
         return False
 
 def string_time_to_seconds(timestamp):
-    h, m, s = map(int, timestamp.split(':'))
+    try:
+        h, m, s = map(int, timestamp.split(':'))
+    except ValueError:
+        m, s = map(int, timestamp.split(':'))
+        h = 0
     return h * 3600 + m * 60 + s

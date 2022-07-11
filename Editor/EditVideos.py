@@ -33,19 +33,20 @@ def subclip_prerequisite():
 
 
     splitter = 20
-    num_of_lines = -abs(10)
+    num_of_lines = -abs(5)
 
     split_dict = group_dict_values_by_splitter(data_dict, splitter)
     seconds_timestamp = []
 
     split_dict = sorted(split_dict.items(), key=lambda x: x[1])
     sort_dict = dict(split_dict)
-    #sorted_dict_highest_to_lowest = dict(sorted(split_dict.items(), key=lambda x: x[1]))
 
     for i in range(-1, num_of_lines, -1):
-        #print(list(split_dict)[i])
-        print(list(sort_dict)[i])
-        #seconds_timestamp.append(HelperFunctions.string_time_to_seconds(list(split_dict)[i]))
+        try:
+            print(list(sort_dict)[i])
+            seconds_timestamp.append(HelperFunctions.string_time_to_seconds(list(sort_dict)[i]))
+        except:
+            pass
 
     seconds_timestamp.sort()
 
