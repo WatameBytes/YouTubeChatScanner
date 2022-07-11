@@ -26,43 +26,45 @@ from ComputeData.ComputeRawChatData import dataProcessing
 
 
 def subclip_prerequisite():
-    RawChatDataFile, list_of_contents, selected_file_index = \
-        files_displayed_to_user_and_user_selects_file(HelperFunctions.RawChatDataDir, "txt")
+    RawChatDataFile = files_displayed_to_user_and_user_selects_file(HelperFunctions.RawChatDataDir, "txt")
 
     # Turn the File into a dictionary
     data_dict = convert_raw_time_data_to_dictionary(RawChatDataFile)
 
+
     splitter = 20
     num_of_lines = -abs(10)
 
-    split_dict = copy_dict_to_splitted_dic(data_dict, splitter)
+    split_dict = group_dict_values_by_splitter(data_dict, splitter)
     seconds_timestamp = []
-    sorted_dict_highest_to_lowest = dict(sorted(split_dict.items(), key=lambda x: x[1]))
+
+    split_dict = sorted(split_dict.items(), key=lambda x: x[1])
+    sort_dict = dict(split_dict)
+    #sorted_dict_highest_to_lowest = dict(sorted(split_dict.items(), key=lambda x: x[1]))
 
     for i in range(-1, num_of_lines, -1):
-        seconds_timestamp.append(HelperFunctions.string_time_to_seconds(list(sorted_dict_highest_to_lowest)[i]))
+        #print(list(split_dict)[i])
+        print(list(sort_dict)[i])
+        #seconds_timestamp.append(HelperFunctions.string_time_to_seconds(list(split_dict)[i]))
 
     seconds_timestamp.sort()
+
     print(seconds_timestamp)
 
     # TODO: Load up video [mp4]
+    #RawVideoFile = files_displayed_to_user_and_user_selects_file(HelperFunctions.VideoDownloadedDir, "mp4")
+
+    print(RawChatDataFile)
+    #print(RawVideoFile)
 
 
-
-
-
-
-
-
-def gatherVideoFile():
-    print("Getting mp4")
-
-def clipMaker():
-    print("Generating Clip :)")
 
 
 
 def files_displayed_to_user_and_user_selects_file(file_directory, extension):
+    print("HELLO WORLD")
+    print(file_directory)
+
     list_of_contents = HelperFunctions.getContents(file_directory, extension)
 
     for index, value in enumerate(list_of_contents): # Display the files in the directory with a choice number
@@ -75,12 +77,12 @@ def files_displayed_to_user_and_user_selects_file(file_directory, extension):
         return
 
     try: # Attempt to open the file the user selected
-        File = open(HelperFunctions.RawChatDataDir + "\\" + list_of_contents[int(i)], "r")
+        File = open(file_directory + "\\" + list_of_contents[int(i)], "r")
     except:
         print("{} isn't a valid choice".format(i))
         return
 
-    return File, list_of_contents, i
+    return File
 
 
 def convert_raw_time_data_to_dictionary(file):
@@ -104,13 +106,13 @@ def convert_raw_time_data_to_dictionary(file):
     return dict_with_the_raw_time_data
 
 
-# Copy the original dict to a new dictionary, but group them up with a splitter
-def copy_dict_to_splitted_dic(dict, splitter):
-    newDict = {}
+# We get splitter amount of values --> add them up --> place it
+def group_dict_values_by_splitter(dict, splitter):
+    new_dict = {}
 
     for item in chunks(dict, splitter):
-        newDict[list(item.keys())[0]] = sum(item.values())
-    return newDict
+        new_dict[list(item.keys())[0]] = sum(item.values())
+    return new_dict
 
 def chunks(data, SIZE=1000000):
     it = iter(data)

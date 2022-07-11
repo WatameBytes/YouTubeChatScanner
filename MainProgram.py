@@ -13,7 +13,7 @@ PrintFunctions.print_list_of_choices()
 
 while(True):
     os.chdir(HelperFunctions.MainDirectory)
-    print(os.getcwd())
+    #print(os.getcwd())
 
     try:
         #choice = (int(input("Please pick an option. Type '0' to view your options: ")))

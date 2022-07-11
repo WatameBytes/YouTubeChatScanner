@@ -7,7 +7,7 @@ MainDirectory = os.getcwd()
 # rel_path = "2091/data.txt"
 # abs_file_path = os.path.join(script_dir, rel_path)
 
-RawChatDataDir = MainDirectory + "/RawYouTubeChatData"
+RawChatDataDir = MainDirectory + "\\RawYouTubeChatData"
 VideoDownloadedDir = MainDirectory + "/VideosDownloaded"
 ComputedDataDir = MainDirectory + "/DataComputed"
 
