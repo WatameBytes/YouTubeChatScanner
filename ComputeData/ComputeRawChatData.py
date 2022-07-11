@@ -3,12 +3,9 @@ from itertools import islice
 from Utilities import HelperFunctions
 from Utilities.HelperFunctions import check_negative_sign
 
-originalDict = dict()
-newDict = dict()
+dict_with_the_raw_time_data = dict()
 
-ORIGINAL_SPLIT = 20
-
-splitValues = [10, 30, 50, 70, 90, 110, 130, 150, 170, 190]
+splitValues = [10, 20, 30, 50, 70, 90, 110, 130, 150, 170, 190]
 listOfDicts = []
 
 
@@ -19,24 +16,27 @@ for i in range(len(splitValues)):
 
 def dataProcessing():
 
-    File, list_of_contents, selected_file_index = files_displayed_to_user_and_user_selects_file() # Check if the user input is valid and a file exist
+    # Check if the user input is valid and a file exist
+    File, list_of_contents, selected_file_index = \
+        files_displayed_to_user_and_user_selects_file(HelperFunctions.RawChatDataDir, "txt")
+
 
     convert_raw_time_data_to_dictionary(File) # Convert the contents of a file (HH:MM:SS) and place it into multiple dictionaries
 
     file_instance, stripped_file_name = create_output_file(selected_file_index, list_of_contents) # Create the output file that will hold all of our data
 
 
-    # TODO: Look into breaking this down
-    writeResultsToFile(file_instance, newDict, 'orginal') # Write the computed values into the output file
+    for i in range(len(splitValues)):
+        copy_dict_to_splitted_dic(dict_with_the_raw_time_data, listOfDicts[i], splitValues[i])
 
     for selected_file_index in range(len(splitValues)):
         writeResultsToFile(file_instance, listOfDicts[selected_file_index], str(splitValues[selected_file_index]))
 
-    print('{} has finished computing'.format(stripped_file_name+'_ComputedData.txt'))
+    print('{} has finished computing'.format(stripped_file_name + '_ComputedData.txt'))
 
 
-def files_displayed_to_user_and_user_selects_file():
-    list_of_contents = HelperFunctions.getContents(HelperFunctions.RawChatDataDir, ".txt")
+def files_displayed_to_user_and_user_selects_file(file_directory, extension):
+    list_of_contents = HelperFunctions.getContents(file_directory, extension)
 
     for index, value in enumerate(list_of_contents): # Display the files in the directory with a choice number
         print("\t[{}]: {}".format(index, value))
@@ -65,22 +65,16 @@ def convert_raw_time_data_to_dictionary(file):
         for word in words: # Iterate over each word in line
             if (check_negative_sign(word)): pass # Looks for a negative value and skips it
 
-            elif word in originalDict: # Check if the word is already in dictionary
-                originalDict[word] = originalDict[word] + 1 # Increment count of word by 1
+            elif word in dict_with_the_raw_time_data: # Check if the word is already in dictionary
+                dict_with_the_raw_time_data[word] = dict_with_the_raw_time_data[word] + 1 # Increment count of word by 1
 
-            else: originalDict[word] = 1 # Add the word to dictionary with count 1
+            else: dict_with_the_raw_time_data[word] = 1 # Add the word to dictionary with count 1
 
 
 def create_output_file(i, listOfContents):
     file_name = os.path.basename(HelperFunctions.RawChatDataDir + "\\" + listOfContents[int(i)])
 
     stripped_file_name = file_name.split("_")[0] # We want to rename "file_ChatData.txt --> ComputedData.txt
-
-    copyOrgignalToNew(originalDict, newDict, ORIGINAL_SPLIT)
-
-    for i in range(len(splitValues)):
-        copyOrgignalToNew(originalDict, listOfDicts[i], splitValues[i])
-
 
     with open(HelperFunctions.ComputedDataDir + '/' + stripped_file_name + '_ComputedData.txt', 'w'): pass # Empties the file
 
@@ -90,34 +84,29 @@ def create_output_file(i, listOfContents):
     return file_instance, stripped_file_name
 
 
+def writeResultsToFile(file_instance, splitted_dict, name_of_dict):
+    file_instance.write('{} splitter'.format(name_of_dict))
 
+    sorted_dict_highest_to_lowest = dict(sorted(splitted_dict.items(), key=lambda x: x[1]))
 
-def getSeconds(timestamp):
-    hh, mm, ss = timestamp.split(":")
-    return (int(hh) * 3600 + int(mm) * 60 + int(ss))
-
-
-def writeResultsToFile(starData, newDict, nameOfDict):
-    starData.write('{} splitter'.format(nameOfDict))
-    dic2 = dict(sorted(newDict.items(), key=lambda x: x[1]))
     try:
-        starData.write("___HHMMSS\n")
+        file_instance.write("___HHMMSS\n")
         for i in range(-1, -31, -1):
-            starData.write(("{}:\t{}\t*:{}\tHH:MM:SS\n"
+            file_instance.write(("{}:\t{}\t*:{}\tHH:MM:SS\n"
                 .format(
                     abs(i),
-                    list(dic2)[i],
-                    list(dic2.values())[i]
+                    list(sorted_dict_highest_to_lowest)[i],
+                    list(sorted_dict_highest_to_lowest.values())[i]
                 )
             ))
     except:
         pass
 
-    starData.write("============================================\n\n")
+    file_instance.write("============================================\n\n")
 
 
 # Copy the original dict to a new dictionary, but group them up with a splitter
-def copyOrgignalToNew(d, newDict, splitter):
+def copy_dict_to_splitted_dic(d, newDict, splitter):
     for item in chunks(d, splitter):
         newDict[list(item.keys())[0]] = sum(item.values())
 

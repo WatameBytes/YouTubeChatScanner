@@ -6,7 +6,7 @@ from CollectChat import ChatScan
 from DownloadVideo import RunDownloader
 from ComputeData import ComputeRawChatData
 from Utilities import PrintFunctions, HelperFunctions
-
+from Editor import EditVideos
 
 PrintFunctions.print_list_of_choices()
 
@@ -47,6 +47,9 @@ while(True):
 
         elif(choice == 8):
             subprocess.Popen('explorer {}'.format(HelperFunctions.MainDirectory))
+
+        elif(choice == 9):
+            EditVideos.subclip_prerequisite()
 
         else:
             PrintFunctions.print_improper_choice()

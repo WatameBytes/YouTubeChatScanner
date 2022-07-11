@@ -2,7 +2,7 @@ import os
 
 MainDirectory = os.getcwd()
 
-RawChatDataDir = MainDirectory + "\\RawYouTubeChatData"
+RawChatDataDir = MainDirectory + "/RawYouTubeChatData"
 VideoDownloadedDir = MainDirectory + "/VideosDownloaded"
 ComputedDataDir = MainDirectory + "/DataComputed"
 
@@ -11,6 +11,9 @@ def getMainDirectory():
 
 
 def printContents(directory, extension, customMessage = None):
+    if(extension.startswith(".")):
+        extension[1:]
+
     listOfContents = []
 
     for i in os.listdir(directory):
