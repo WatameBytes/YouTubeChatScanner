@@ -1,6 +1,11 @@
 import os
-
+# USE THIS WHEN WE ARE RUNNING IN OUR MAIN PROGRAM
 MainDirectory = os.getcwd()
+#MainDirectory = "../julyProject" # USE THIS WHEN RUNNING TEST DIR
+
+# script_dir = os.path.dirname(__file__)
+# rel_path = "2091/data.txt"
+# abs_file_path = os.path.join(script_dir, rel_path)
 
 RawChatDataDir = MainDirectory + "/RawYouTubeChatData"
 VideoDownloadedDir = MainDirectory + "/VideosDownloaded"
@@ -41,3 +46,7 @@ def check_negative_sign(s):
         return True
     else:
         return False
+
+def string_time_to_seconds(timestamp):
+    h, m, s = map(int, timestamp.split(':'))
+    return h * 3600 + m * 60 + s

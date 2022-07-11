@@ -6,12 +6,11 @@ def print_list_of_choices():
         "1: Get Chat Data\n"
         "2: Download YouTube Video\n"
         "3: Compute Chat Data\n"
-        "4: Exit\n"
+        "4: Subclip Maker\n" 
         "5: Current Threads\n"
         "6: List Contents\n"
-        "7: Compute Data\n"
-        "8: Open File Explorer\n"
-        "9: Subclip Maker\n"
+        "7: Open File Explorer\n"
+        "8: Exit\n"
     )
 
 
