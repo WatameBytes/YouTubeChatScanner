@@ -16,7 +16,7 @@ def createClip(seconds_timestamp, clip, name):
     END_VIDEO = clip.end
 
     list_of_clips = []
-    # list_of_clips.append(clip.subclip(80, 90))
+
     for i in seconds_timestamp:
         try:
             lower_bound = (i - VIDEO_SPLITTER) if (i - VIDEO_SPLITTER) > START_VIDEO else START_VIDEO
@@ -27,7 +27,7 @@ def createClip(seconds_timestamp, clip, name):
 
     combined_clips = concatenate_videoclips(list_of_clips)
 
-    combined_clips.write_videofile(name + "_COMBINED.mp4")
+    combined_clips.write_videofile(HelperFunctions.ClippedVideo + "/" + name + "_COMBINED.mp4")
 
 
 def subclip_prerequisite():
@@ -36,26 +36,24 @@ def subclip_prerequisite():
     if(not seconds_timestamp):
         return
 
-    clip, name = user_selects_video_to_clip()
+    clip, RawVideoFile, name = user_selects_video_to_clip()
 
     if (not clip):
         return
-
-    Thread = threading.Thread(target=createClip, args=(seconds_timestamp, clip, name.split(".")[0], ))
+    Thread = threading.Thread(target=createClip, args=(seconds_timestamp, clip, name, ))
     Thread.start()
 
 def user_selects_video_to_clip():
-    RawVideoFile = files_displayed_to_user_and_user_selects_file(HelperFunctions.VideoDownloadedDir, "mp4")
+    RawVideoFile, name = files_displayed_to_user_and_user_selects_file(HelperFunctions.VideoDownloadedDir, "mp4")
     if(not RawVideoFile):
         return False
 
     clip = VideoFileClip(RawVideoFile.name)
-    name = RawVideoFile.name
-    return clip, name
+    return clip, RawVideoFile, name
 
 
 def user_selects_data_to_convert_to_seconds():
-    RawChatDataFile = files_displayed_to_user_and_user_selects_file(HelperFunctions.RawChatDataDir, "txt")
+    RawChatDataFile, name = files_displayed_to_user_and_user_selects_file(HelperFunctions.RawChatDataDir, "txt")
     if(not RawChatDataFile):
         return False
 
@@ -95,7 +93,9 @@ def files_displayed_to_user_and_user_selects_file(file_directory, extension):
         print("{} isn't a valid choice".format(i))
         return False
 
-    return File
+    name = list_of_contents[int(i)].split(".")[0]
+
+    return File, name
 
 
 def convert_raw_time_data_to_dictionary(file):

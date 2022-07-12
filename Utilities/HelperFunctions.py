@@ -1,7 +1,7 @@
 import os
 # USE THIS WHEN WE ARE RUNNING IN OUR MAIN PROGRAM
 MainDirectory = os.getcwd()
-#MainDirectory = "../julyProject" # USE THIS WHEN RUNNING TEST DIR
+#MainDirectory = "../julyProject/" # USE THIS WHEN RUNNING TEST DIR
 
 # script_dir = os.path.dirname(__file__)
 # rel_path = "2091/data.txt"
