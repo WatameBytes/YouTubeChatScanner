@@ -6,9 +6,9 @@ from moviepy.editor import VideoFileClip, concatenate_videoclips
 from Utilities import HelperFunctions, PrintFunctions
 from ComputeData.ComputeRawChatData import dataProcessing
 
-DATA_SPLITTER = 20
-NUM_OF_LINES = -abs(5)
-VIDEO_SPLITTER = 30
+DATA_SPLITTER = 30
+NUM_OF_LINES = -abs(35)
+VIDEO_SPLITTER = 45
 
 
 def createClip(seconds_timestamp, clip, name):
@@ -65,7 +65,7 @@ def user_selects_data_to_convert_to_seconds():
     sort_dict = dict(split_dict)
     for i in range(-1, NUM_OF_LINES - 1, -1):
         try:
-            print(list(sort_dict)[i])
+            #print(list(sort_dict)[i])
             seconds_timestamp.append(HelperFunctions.string_time_to_seconds(list(sort_dict)[i]))
         except:
             pass
