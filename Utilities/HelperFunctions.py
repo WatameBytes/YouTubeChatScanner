@@ -1,7 +1,16 @@
 import os
 # USE THIS WHEN WE ARE RUNNING IN OUR MAIN PROGRAM
-MainDirectory = os.getcwd()
-#MainDirectory = "../julyProject/" # USE THIS WHEN RUNNING TEST DIR
+
+#MainDirectory = os.getcwd()
+
+#MainDirectory = "../../../julyProject"
+
+MainDirectory = "../julyProject/" # USE THIS WHEN RUNNING TEST DIR
+
+
+# Algo testing
+#MainDirectory = "../../../julyProject"
+#print(MainDirectory)
 
 # script_dir = os.path.dirname(__file__)
 # rel_path = "2091/data.txt"
@@ -11,6 +20,8 @@ RawChatDataDir = MainDirectory + "\\RawYouTubeChatData"
 VideoDownloadedDir = MainDirectory + "\\VideosDownloaded"
 ComputedDataDir = MainDirectory + "\\DataComputed"
 ClippedVideo = MainDirectory + "\\ClippedVideos"
+
+PureChatComputeData = MainDirectory + "\\DataComputed\\PureData"
 
 def getMainDirectory():
     return os.getcwd()
@@ -55,3 +66,4 @@ def string_time_to_seconds(timestamp):
         m, s = map(int, timestamp.split(':'))
         h = 0
     return h * 3600 + m * 60 + s
+

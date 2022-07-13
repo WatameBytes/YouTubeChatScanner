@@ -6,8 +6,8 @@ from moviepy.editor import VideoFileClip, concatenate_videoclips
 from Utilities import HelperFunctions, PrintFunctions
 from ComputeData.ComputeRawChatData import dataProcessing
 
-DATA_SPLITTER = 25
-NUM_OF_LINES = -abs(20)
+DATA_SPLITTER = 20
+NUM_OF_LINES = -abs(10)
 VIDEO_SPLITTER = 30
 
 
