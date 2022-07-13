@@ -12,9 +12,10 @@ def seconds_to_time_stamp(seconds):
     seconds %= 3600
     minutes = seconds // 60
     seconds %= 60
-    if(hour == 0):
-        #return "%02d:%02d" % (minutes, seconds)
-        return "{:02}:{:02}".format(minutes, seconds)
+
+    if(hour == 0): # Without this we get '0:00:00' instead of '00:00
+         return "{:02}:{:02}".format(minutes, seconds)
+
     return "%d:%02d:%02d" % (hour, minutes, seconds)
 
 
@@ -63,13 +64,15 @@ print(last_line)
 d = dict()
 
 START = 0
+# We can make sure we can break it into 10 sec marks
+round_down_value = 10
 END = string_time_to_seconds(last_line)
-
+END_ROUND_DOWN = END - (END % round_down_value)
 
 print("Start at {}".format(START))
-print("End at {}".format(END))
+print("End at {}".format(END_ROUND_DOWN))
 
-for i in range(START, END + 1, 1):
+for i in range(START, END_ROUND_DOWN + 1, 1):
     d[seconds_to_time_stamp(i)] = 0
 
 
