@@ -1,4 +1,5 @@
 import os
+from itertools import islice
 
 from Utilities import HelperFunctions
 from Utilities.HelperFunctions import MainDirectory, getContents
@@ -93,3 +94,18 @@ def writeResultsToFile(file_instance, splitted_dict, name_of_dict, LAST_INDEX):
         pass
 
     file_instance.write("============================================\n\n")
+
+
+# Copy the original dict to a new dictionary, but group them up with a splitter
+def copy_dict_to_splitted_dic(d, newDict, splitter):
+
+    for item in chunks(d, splitter):
+        newDict[list(item.keys())[0]] = sum(item.values())
+
+    return newDict
+
+
+def chunks(data, SIZE=1000000):
+    it = iter(data)
+    for i in range(0, len(data), SIZE):
+        yield {k: data[k] for k in islice(it, SIZE)}

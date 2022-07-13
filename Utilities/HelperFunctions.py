@@ -21,7 +21,8 @@ VideoDownloadedDir = MainDirectory + "\\VideosDownloaded"
 ComputedDataDir = MainDirectory + "\\DataComputed"
 ClippedVideo = MainDirectory + "\\ClippedVideos"
 
-PureChatComputeData = MainDirectory + "\\DataComputed\\PureData"
+PureChatComputeDataDir = MainDirectory + "\\DataComputed\\PureData"
+GroupChatComputeDataDir = MainDirectory + "\\DataComputed\\GroupData"
 
 def getMainDirectory():
     return os.getcwd()
