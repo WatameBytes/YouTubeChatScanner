@@ -146,7 +146,7 @@ def convert_raw_time_data_to_dictionary_FILTERED(dict_with_the_raw_time_data, fi
 
 def sanitize_raw_chat_timestamp_data_and_get_last_timestamp(raw_chat_file, OFFSET):
     stripped_file_name = raw_chat_file.split("_")[0]  # We want to rename "file_ChatData.txt --> ComputedData.txt
-    filtered_output_file = open(stripped_file_name + "CLEANED.txt", 'w')
+    filtered_output_file = open(stripped_file_name + "_CLEANED.txt", 'w')
 
     for line in open(raw_chat_file):
         if line.startswith("-"):

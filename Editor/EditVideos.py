@@ -3,13 +3,58 @@ import threading
 from itertools import islice
 
 from moviepy.editor import VideoFileClip, concatenate_videoclips
-from Utilities import HelperFunctions, PrintFunctions
-from ComputeData.ComputeRawChatData import dataProcessing
 
-DATA_SPLITTER = 25
-NUM_OF_LINES = -abs(20)
-VIDEO_SPLITTER = 30
+from ComputeData.ComputeHelperFunctions import \
+    convert_string_timestamps_into_seconds, create_dict_with_timestamps, convert_raw_time_data_to_dictionary_FILTERED
 
+from Utilities.HelperFunctions import RawChatDataDir, string_time_to_seconds, ROUND_DOWN_VALUE, \
+    ClippedVideo, VideoDownloadedDir, getContents
+
+
+NUMBER_OF_LINES = -abs(10)
+SPLIT_DICT_BY_SECONDS = 15
+# Number of lines located at HelperFunction.py
+VIDEO_SPLITTER = 30 # A smaller split actually matter since split is by seconds NOT SEGMENTS ANYMORE!!!
+
+def get_last_time_stamp(chat_file):
+    for line in open(chat_file):
+        last_line = line
+    return last_line
+
+def subclip_prerequisite():
+
+    file, list_of_contents, selected_file_index = files_displayed_to_user_and_user_selects_file(RawChatDataDir, "_CLEANED.txt")
+
+
+    last_line = get_last_time_stamp(file.name)
+
+    START = 0
+    END = convert_string_timestamps_into_seconds(last_line)
+    END_ROUND_DOWN = END - (END % ROUND_DOWN_VALUE)
+
+
+    d = create_dict_with_timestamps(START, END_ROUND_DOWN)
+    data = convert_raw_time_data_to_dictionary_FILTERED(d, open(file.name, 'r'))
+
+    splt_dict = group_dict_values_by_splitter(data, 10)
+    splt_dict = sorted(splt_dict.items(), key=lambda x: x[1])
+
+    sort_dict = dict(splt_dict)
+    seconds_timestamp = []
+    for i in range(-1, NUMBER_OF_LINES - 1, -1):
+        try:
+            seconds_timestamp.append(string_time_to_seconds(list(sort_dict)[i]))
+        except:
+            pass
+
+    clip, RawVideoFile, name = user_selects_video_to_clip()
+
+    print(name)
+    if (not clip):
+        return
+
+    # Thread = threading.Thread(target=createClip, args=(seconds_timestamp, clip, name, ))
+    # Thread.start()
 
 def createClip(seconds_timestamp, clip, name):
     START_VIDEO = clip.start
@@ -26,57 +71,26 @@ def createClip(seconds_timestamp, clip, name):
 
 
     combined_clips = concatenate_videoclips(list_of_clips)
+    print(name)
+    #combined_clips.write_videofile(ClippedVideo + "/" + name + "_COMBINED.mp4")
 
-    combined_clips.write_videofile(HelperFunctions.ClippedVideo + "/" + name + "_COMBINED.mp4")
-
-
-def subclip_prerequisite():
-
-    seconds_timestamp = user_selects_data_to_convert_to_seconds()
-    if(not seconds_timestamp):
-        return
-
-    clip, RawVideoFile, name = user_selects_video_to_clip()
-
-    if (not clip):
-        return
-    Thread = threading.Thread(target=createClip, args=(seconds_timestamp, clip, name, ))
-    Thread.start()
 
 def user_selects_video_to_clip():
-    RawVideoFile, name = files_displayed_to_user_and_user_selects_file(HelperFunctions.VideoDownloadedDir, "mp4")
-    if(not RawVideoFile):
+    file, list_of_contents, selected_file_index = files_displayed_to_user_and_user_selects_file(VideoDownloadedDir, "mp4")
+
+    if(not file):
         return False
 
-    clip = VideoFileClip(RawVideoFile.name)
-    return clip, RawVideoFile, name
+    clip = VideoFileClip(file.name)
+    return clip, file, clip
 
 
-def user_selects_data_to_convert_to_seconds():
-    RawChatDataFile, name = files_displayed_to_user_and_user_selects_file(HelperFunctions.RawChatDataDir, "txt")
-    if(not RawChatDataFile):
-        return False
-
-    # Turn the File into a dictionary
-    data_dict = convert_raw_time_data_to_dictionary(RawChatDataFile)
-    split_dict = group_dict_values_by_splitter(data_dict, DATA_SPLITTER)
-    seconds_timestamp = []
-    split_dict = sorted(split_dict.items(), key=lambda x: x[1])
-    sort_dict = dict(split_dict)
-    for i in range(-1, NUM_OF_LINES - 1, -1):
-        try:
-            #print(list(sort_dict)[i])
-            seconds_timestamp.append(HelperFunctions.string_time_to_seconds(list(sort_dict)[i]))
-        except:
-            pass
-    seconds_timestamp.sort()
-    return seconds_timestamp
 
 
 def files_displayed_to_user_and_user_selects_file(file_directory, extension):
     print(file_directory)
 
-    list_of_contents = HelperFunctions.getContents(file_directory, extension)
+    list_of_contents = getContents(file_directory, extension)
 
     for index, value in enumerate(list_of_contents):  # Display the files in the directory with a choice number
         print("\t[{}]: {}".format(index, value))
@@ -87,6 +101,7 @@ def files_displayed_to_user_and_user_selects_file(file_directory, extension):
         print("An exception was found!")
         return False
 
+
     try:  # Attempt to open the file the user selected
         File = open(file_directory + "\\" + list_of_contents[int(i)], "r")
     except:
@@ -95,30 +110,8 @@ def files_displayed_to_user_and_user_selects_file(file_directory, extension):
 
     name = list_of_contents[int(i)].split(".")[0]
 
-    return File, name
+    return File, list_of_contents, i
 
-
-def convert_raw_time_data_to_dictionary(file):
-    dict_with_the_raw_time_data = dict()
-
-    for line in file:  # Loop through each line of the file
-        line = line.strip()  # Remove the leading spaces and newline character
-        line = line.lower()  # Convert characters to lowercase
-        # line = line.translate(line.maketrans("", "", string.punctuation)) # Removes the ':'
-        words = line.split(" ")  # Split the line into words
-
-        for word in words:  # Iterate over each word in line
-            if (HelperFunctions.check_negative_sign(word)):
-                pass  # Looks for a negative value and skips it
-
-            elif word in dict_with_the_raw_time_data:  # Check if the word is already in dictionary
-                dict_with_the_raw_time_data[word] = dict_with_the_raw_time_data[
-                                                        word] + 1  # Increment count of word by 1
-
-            else:
-                dict_with_the_raw_time_data[word] = 1  # Add the word to dictionary with count 1
-
-    return dict_with_the_raw_time_data
 
 
 # We get splitter amount of values --> add them up --> place it

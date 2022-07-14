@@ -4,7 +4,7 @@
 # PRO: Implemented an OFFSET, since chat takes time to react due to stream delay and human reaction
 # CON: none :)
 
-from Utilities.HelperFunctions import FilterChatComputeDataDir, splitValues, NUMBER_OF_LINES, STEAM_DELAY, ROUND_DOWN_VALUE
+from Utilities.HelperFunctions import FilterChatComputeDataDir, splitValues, NUMBER_OF_LINES, STREAM_DELAY, ROUND_DOWN_VALUE
 
 from ComputeData.ComputeHelperFunctions \
     import create_output_file, convert_string_timestamps_into_seconds, \
@@ -18,7 +18,7 @@ def compute_filler_group(list_of_contents, selected_file_index, raw_chat_file):
     listOfDicts = create_dict_with_split_value_array(splitValues)
 
     file_instance, stripped_file_name = create_output_file(selected_file_index, list_of_contents, FilterChatComputeDataDir)
-    filtered_file, last_line = sanitize_raw_chat_timestamp_data_and_get_last_timestamp(raw_chat_file.name, STEAM_DELAY)
+    filtered_file, last_line = sanitize_raw_chat_timestamp_data_and_get_last_timestamp(raw_chat_file.name, STREAM_DELAY)
 
     START = 0
 
