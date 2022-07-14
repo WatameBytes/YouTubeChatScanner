@@ -27,6 +27,7 @@ FilterChatComputeDataDir = MainDirectory + "\\DataComputed\\FillerData"
 
 splitValues = [1, 5, 10, 15, 20, 25, 30]
 NUMBER_OF_LINES = -abs(30)
+STEAM_DELAY = 5
 
 def getMainDirectory():
     return os.getcwd()

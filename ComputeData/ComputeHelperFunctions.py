@@ -144,7 +144,7 @@ def convert_raw_time_data_to_dictionary_FILTERED(dict_with_the_raw_time_data, fi
     return dict_with_the_raw_time_data
 
 
-def sanitize_raw_chat_timestamp_data_and_get_last_timestamp(raw_chat_file):
+def sanitize_raw_chat_timestamp_data_and_get_last_timestamp(raw_chat_file, OFFSET):
     filtered_output_file = open(raw_chat_file + "CLEANED", 'w')
 
     for line in open(raw_chat_file):
@@ -152,11 +152,25 @@ def sanitize_raw_chat_timestamp_data_and_get_last_timestamp(raw_chat_file):
             pass
 
         else:
-            last_line = line
-            if (len(line) == 5):
-                filtered_output_file.write('0' + line)
+            if(OFFSET != 0):
+                line = convert_string_timestamps_into_seconds(line)
+                if(line <= OFFSET):
+                    line = 0
+                else:
+                    line -= OFFSET
+                    line = convert_seconds_into_timestamps(line)
+                    filtered_output_file.write(line + '\n')
+                    last_line = line
+
+
+
             else:
-                filtered_output_file.write(line)
+                if (len(line) == 5):
+                    filtered_output_file.write('0' + line)
+                else:
+                    filtered_output_file.write(line)
+                last_line = line
+
     return filtered_output_file, last_line
 
 
