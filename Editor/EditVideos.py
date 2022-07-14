@@ -49,17 +49,18 @@ def subclip_prerequisite():
 
     clip, RawVideoFile, name = user_selects_video_to_clip()
 
-    print(name)
     if (not clip):
         return
 
-    # Thread = threading.Thread(target=createClip, args=(seconds_timestamp, clip, name, ))
-    # Thread.start()
+    print("RawVideo: {}".format(RawVideoFile.name))
+    print("Name: {}".format(name))
+    Thread = threading.Thread(target=createClip, args=(seconds_timestamp, clip, name, ))
+    Thread.start()
 
 def createClip(seconds_timestamp, clip, name):
     START_VIDEO = clip.start
     END_VIDEO = clip.end
-
+    seconds_timestamp.sort()
     list_of_clips = []
 
     for i in seconds_timestamp:
@@ -71,20 +72,19 @@ def createClip(seconds_timestamp, clip, name):
 
 
     combined_clips = concatenate_videoclips(list_of_clips)
-    print(name)
-    #combined_clips.write_videofile(ClippedVideo + "/" + name + "_COMBINED.mp4")
+    #print(name)
+    combined_clips.write_videofile(ClippedVideo + "/" + name + "_COMBINED.mp4")
 
 
 def user_selects_video_to_clip():
-    file, list_of_contents, selected_file_index = files_displayed_to_user_and_user_selects_file(VideoDownloadedDir, "mp4")
-
-    if(not file):
+    RawVideoFile, listofcontent, i = files_displayed_to_user_and_user_selects_file(VideoDownloadedDir, "mp4")
+    if (not RawVideoFile):
         return False
 
-    clip = VideoFileClip(file.name)
-    return clip, file, clip
+    clip = VideoFileClip(RawVideoFile.name)
 
-
+    #return clip, RawVideoFile, RawVideoFile.name
+    return clip, RawVideoFile, listofcontent[int(i)]
 
 
 def files_displayed_to_user_and_user_selects_file(file_directory, extension):
