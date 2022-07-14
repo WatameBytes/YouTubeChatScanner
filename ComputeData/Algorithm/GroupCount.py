@@ -4,7 +4,7 @@
 # CON: We are only given the first TIMESTAMP --> PLAN ACCORDINGLY
 
 from ComputeData.ComputeHelperFunctions \
-    import create_output_file, writeResultsToFile, copy_dict_to_splitted_dic
+    import create_output_file, writeResultsToFile, copy_dict_to_splitted_dic, create_dict_with_split_value_array
 from Utilities.HelperFunctions import GroupChatComputeDataDir
 
 NUMBER_OF_LINES = -abs(30)
@@ -13,14 +13,9 @@ splitValues = [5, 10, 15, 20, 25]
 listOfDicts = []
 splitted_dic = []
 
-# Create a dict with the amount of split values we created
-for i in range(len(splitValues)):
-    # for i in splitValues: --> i will be 10, 30, 50, 70, 110
-    listOfDicts.append(dict())
-
 def compute_group(list_of_contents, selected_file_index, dict_with_raw_time_data):
+    listOfDicts = create_dict_with_split_value_array(splitValues)
     file_instance, stripped_file_name = create_output_file(selected_file_index, list_of_contents, GroupChatComputeDataDir)
-
 
     #Create groups in our dictionary
     for i in range(len(splitValues)):

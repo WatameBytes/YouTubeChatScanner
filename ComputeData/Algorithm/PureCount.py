@@ -3,7 +3,7 @@
 # CON: If chat reacted in a moment for more than one sec, we have multiple instances in the same time area
 
 from ComputeData.ComputeHelperFunctions \
-    import convert_raw_time_data_to_dictionary, create_output_file, writeResultsToFile
+    import convert_raw_time_data_to_dictionary_UNFILTERED, create_output_file, writeResultsToFile
 
 from Utilities import HelperFunctions
 

@@ -23,6 +23,7 @@ ClippedVideo = MainDirectory + "\\ClippedVideos"
 
 PureChatComputeDataDir = MainDirectory + "\\DataComputed\\PureData"
 GroupChatComputeDataDir = MainDirectory + "\\DataComputed\\GroupData"
+FilterChatComputeDataDir = MainDirectory + "\\DataComputed\\FillerData"
 
 def getMainDirectory():
     return os.getcwd()

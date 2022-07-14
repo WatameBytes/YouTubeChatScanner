@@ -27,7 +27,7 @@ def files_displayed_to_user_and_user_selects_file(file_directory, extension):
 
 
 # Convert timestamps of a file into a dictionary and count how many times each timestamp appears
-def convert_raw_time_data_to_dictionary(file):
+def convert_raw_time_data_to_dictionary_UNFILTERED(file):
     dict_with_the_raw_time_data = {}
     for line in file: # Loop through each line of the file
         line = line.strip() # Remove the leading spaces and newline character
@@ -109,3 +109,69 @@ def chunks(data, SIZE=1000000):
     it = iter(data)
     for i in range(0, len(data), SIZE):
         yield {k: data[k] for k in islice(it, SIZE)}
+
+# STR[01:11:44] --> INT[4304]
+def convert_string_timestamps_into_seconds(timestamp):
+    try:
+        h, m, s = map(int, timestamp.split(':'))
+    # No hour is given --> Convert only MIN/SECS
+    except ValueError:
+        m, s = map(int, timestamp.split(':'))
+        h = 0
+    return h * 3600 + m * 60 + s
+
+# INT[653] --> STR[10:53]
+def convert_seconds_into_timestamps(seconds):
+    seconds = seconds % (24 * 3600)
+    hour = seconds // 3600
+    seconds %= 3600
+    minutes = seconds // 60
+    seconds %= 60
+
+    if (hour == 0):  # Without this we get '0:00:00' instead of '00:00
+        return "{:02}:{:02}".format(minutes, seconds)
+
+    return "%d:%02d:%02d" % (hour, minutes, seconds)
+
+
+def convert_raw_time_data_to_dictionary_FILTERED(dict_with_the_raw_time_data, file):
+    for line in file:  # Loop through each line of the file
+        line = line.replace('\n', '') # Not necessary, but makes line looks nice when printing
+
+        if (line in dict_with_the_raw_time_data):
+            dict_with_the_raw_time_data[line] = dict_with_the_raw_time_data[line] + 1
+
+    return dict_with_the_raw_time_data
+
+
+def sanitize_raw_chat_timestamp_data_and_get_last_timestamp(raw_chat_file):
+    filtered_output_file = open(raw_chat_file + "CLEANED", 'w')
+
+    for line in open(raw_chat_file):
+        if line.startswith("-"):
+            pass
+
+        else:
+            last_line = line
+            if (len(line) == 5):
+                filtered_output_file.write('0' + line)
+            else:
+                filtered_output_file.write(line)
+    return filtered_output_file, last_line
+
+
+def create_dict_with_timestamps(START, END_ROUND_DOWN):
+    timestamp_dict = dict()
+    for i in range(START, END_ROUND_DOWN + 1, 1):
+        timestamp_dict[convert_seconds_into_timestamps(i)] = 0
+
+    return timestamp_dict
+
+
+def create_dict_with_split_value_array(splitValues):
+    listOfDicts = []
+    # Create a dict with the amount of split values we created
+    for i in range(len(splitValues)):
+        # for i in splitValues: --> i will be 10, 30, 50, 70, 110
+        listOfDicts.append(dict())
+    return listOfDicts

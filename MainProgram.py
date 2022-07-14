@@ -10,40 +10,39 @@ from Editor import EditVideos
 
 PrintFunctions.print_list_of_choices()
 
-
 while(True):
     os.chdir(HelperFunctions.MainDirectory)
-    #print(os.getcwd())
 
     try:
         choice = (int(input("Please pick an option. Type '0' to view your options: ")))
-        #choice = 4
 
-        # Display user choices
+        # Prints out the user choices
         if (choice == 0):
             PrintFunctions.print_list_of_choices()
 
-        # Gather chat data
+        # Give a YouTube video link + name ==> get chat data timestamps
         elif (choice == 1):
             ChatScan.gather_video_info()
 
-        # Download a YouTube video
+        # Give a YouTube video link + name ==> Download the video
         elif (choice == 2):
             RunDownloader.prerequisite_checklist()
 
-        # Turn raw chat data into computed data
+        # Turn timestamp data into usable data with one of our algorithms
         elif (choice == 3):
             ComputeRawChatData.dataProcessing()
 
-        # Create a subclip [REQUIRES CHAT DATA + MP4)
+        # TODO: Implement an Algorithm choice and other user choices
+        # Create a subclip using computed chat data [REQUIRES CHAT DATA + MP4]
         elif (choice == 4):
             EditVideos.subclip_prerequisite()
 
-        # List number of threads
+        # Print the number of threads
         elif (choice == 5):
             print("Number of jobs running: {}".format(threading.active_count() - 1))
 
-        # List contents of raw char data, mp4, and computed data
+        # TODO: Implement other file paths
+        # Print out the contents of a directory
         elif(choice == 6):
             HelperFunctions.printContents(HelperFunctions.RawChatDataDir, ".txt", "[RAW] Chat Data: ")
             HelperFunctions.printContents(HelperFunctions.VideoDownloadedDir, ".mp4", "Video Content: ")
@@ -60,6 +59,7 @@ while(True):
                 continue
             break
 
+        # None of the choices were picked, display the choice again
         else:
             PrintFunctions.print_improper_choice()
 
@@ -67,6 +67,6 @@ while(True):
         print(e)
         PrintFunctions.print_improper_choice()
 
-    # finally:
-    #     user = input("PLACE HOLDER: WILL INPUT {} AFTER YOU TYPE SOMETHING".format(choice))
-
+    # except:
+    #     print('An exception has occured')
+    #     PrintFunctions.print_improper_choice()
