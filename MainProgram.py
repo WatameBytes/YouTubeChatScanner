@@ -67,6 +67,6 @@ while(True):
         print(e)
         PrintFunctions.print_improper_choice()
 
-    # except:
-    #     print('An exception has occured')
-    #     PrintFunctions.print_improper_choice()
+    except:
+        print('An exception has occured')
+        PrintFunctions.print_improper_choice()
