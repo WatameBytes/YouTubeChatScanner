@@ -1,9 +1,10 @@
-#
-#
-#
-#
+# Creates timestamps for ANYTHING between 0:00:00 to the end of the video
+# Meaning we break the data into seconds instead of groups --> 10 means break it every 10 secs
+# PRO: THE BEST ALGORITHM OF THE THREE
+# PRO: Implemented an OFFSET, since chat takes time to react due to stream delay and human reaction
+# CON: none :)
 
-from Utilities.HelperFunctions import FilterChatComputeDataDir, splitValues, NUMBER_OF_LINES, STEAM_DELAY
+from Utilities.HelperFunctions import FilterChatComputeDataDir, splitValues, NUMBER_OF_LINES, STEAM_DELAY, ROUND_DOWN_VALUE
 
 from ComputeData.ComputeHelperFunctions \
     import create_output_file, convert_string_timestamps_into_seconds, \
@@ -22,9 +23,8 @@ def compute_filler_group(list_of_contents, selected_file_index, raw_chat_file):
     START = 0
 
     # We can make sure we can break it into 10 sec marks
-    round_down_value = 10
     END = convert_string_timestamps_into_seconds(last_line)
-    END_ROUND_DOWN = END - (END % round_down_value)
+    END_ROUND_DOWN = END - (END % ROUND_DOWN_VALUE)
 
     d = create_dict_with_timestamps(START, END_ROUND_DOWN)
 
