@@ -3,13 +3,14 @@
 # CON: Gaps occur and wanting to get '30' seconds could give us 0:01, 0:03, 0:25, 0:30, [CONTINUE]
 # CON: We are only given the first TIMESTAMP --> PLAN ACCORDINGLY
 
+
+from Utilities.HelperFunctions import GroupChatComputeDataDir, splitValues, NUMBER_OF_LINES
+
 from ComputeData.ComputeHelperFunctions \
     import create_output_file, writeResultsToFile, copy_dict_to_splitted_dic, create_dict_with_split_value_array
-from Utilities.HelperFunctions import GroupChatComputeDataDir
 
-NUMBER_OF_LINES = -abs(30)
 
-splitValues = [5, 10, 15, 20, 25]
+
 listOfDicts = []
 splitted_dic = []
 

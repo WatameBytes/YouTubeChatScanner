@@ -25,6 +25,9 @@ PureChatComputeDataDir = MainDirectory + "\\DataComputed\\PureData"
 GroupChatComputeDataDir = MainDirectory + "\\DataComputed\\GroupData"
 FilterChatComputeDataDir = MainDirectory + "\\DataComputed\\FillerData"
 
+splitValues = [1, 5, 10, 15, 20, 25, 30]
+NUMBER_OF_LINES = -abs(30)
+
 def getMainDirectory():
     return os.getcwd()
 

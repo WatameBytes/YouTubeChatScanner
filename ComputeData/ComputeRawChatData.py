@@ -9,6 +9,7 @@ from ComputeData.Algorithm.PureCount import compute_no_group
 from ComputeData.Algorithm.GroupCount import compute_group
 from ComputeData.Algorithm.FillerGroup import compute_filler_group
 
+
 def dataProcessing():
     # Get the user input that will grab us a RAW_CHAT_DATA file
     File, list_of_contents, selected_file_index = ComputeHelperFunctions.\
@@ -21,3 +22,6 @@ def dataProcessing():
     compute_group(list_of_contents, selected_file_index, dict_with_raw_time_data)
 
     compute_filler_group(list_of_contents, selected_file_index, File)
+
+
+
