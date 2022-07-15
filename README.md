@@ -16,6 +16,9 @@ While I was clipping some VTuber as a hobby. I thought "Could I automate this?"
 - Compute chat data
 - Clip your video based off chat data
 
+## Documentation
+
+[Documentation](https://linktodocumentation)
 
 ## Requirements
 
