@@ -1,11 +1,11 @@
-import os
 import threading
 from itertools import islice
 
 from moviepy.editor import VideoFileClip, concatenate_videoclips
 
 from ComputeData.ComputeHelperFunctions import \
-    convert_string_timestamps_into_seconds, create_dict_with_timestamps, convert_raw_time_data_to_dictionary_FILTERED
+    convert_string_timestamps_into_seconds, create_dict_with_timestamps, convert_raw_time_data_to_dictionary_FILTERED, \
+    get_last_timestamp_from_from
 
 from Utilities.HelperFunctions import RawChatDataDir, string_time_to_seconds, ROUND_DOWN_VALUE, \
     ClippedVideo, VideoDownloadedDir, getContents
@@ -13,20 +13,15 @@ from Utilities.HelperFunctions import RawChatDataDir, string_time_to_seconds, RO
 
 NUMBER_OF_LINES = -abs(10)
 SPLIT_DICT_BY_SECONDS = 15
-# Number of lines located at HelperFunction.py
 VIDEO_SPLITTER = 30 # A smaller split actually matter since split is by seconds NOT SEGMENTS ANYMORE!!!
 
-def get_last_time_stamp(chat_file):
-    for line in open(chat_file):
-        last_line = line
-    return last_line
 
 def subclip_prerequisite():
 
     file, list_of_contents, selected_file_index = files_displayed_to_user_and_user_selects_file(RawChatDataDir, "_CLEANED.txt")
 
 
-    last_line = get_last_time_stamp(file.name)
+    last_line = get_last_timestamp_from_from(file.name)
 
     START = 0
     END = convert_string_timestamps_into_seconds(last_line)

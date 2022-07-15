@@ -2,7 +2,7 @@ import os
 from itertools import islice
 
 from ComputeData import ComputeHelperFunctions
-from ComputeData.ComputeHelperFunctions import writeResultsToFile, convert_raw_time_data_to_dictionary_UNFILTERED
+from ComputeData.ComputeHelperFunctions import write_results_to_file, convert_raw_time_data_to_dictionary_UNFILTERED
 from Utilities import HelperFunctions
 
 from ComputeData.Algorithm.PureCount import compute_no_group
