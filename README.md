@@ -18,8 +18,7 @@ While I was clipping some VTuber as a hobby. I thought "Could I automate this?"
 
 ## Documentation
 
-[Documentation](https://linktodocumentation)
-[Test](https://github.com/ArisaBonsaiTree/YouTubeChatScannerJulyProject/blob/main/Documentation.md)
+[Documentation](https://github.com/ArisaBonsaiTree/YouTubeChatScannerJulyProject/blob/main/Documentation.md)
 
 ## Requirements
 
