@@ -9,10 +9,6 @@ While I was clipping some VTuber as a hobby. I thought "Could I automate this?"
 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 
-## Documentation
-
-[Documentation](https://linktodocumentation)
-
 ## Features
 
 - Scan an archived YouTube livestream chat to get frequency of comments
