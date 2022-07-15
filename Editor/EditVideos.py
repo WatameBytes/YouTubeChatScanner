@@ -11,16 +11,14 @@ from Utilities.HelperFunctions import RawChatDataDir, string_time_to_seconds, RO
     ClippedVideo, VideoDownloadedDir, getContents
 
 
-NUMBER_OF_LINES = -abs(10)
-SPLIT_DICT_BY_SECONDS = 15
-VIDEO_SPLITTER = 30 # A smaller split actually matter since split is by seconds NOT SEGMENTS ANYMORE!!!
+NUMBER_OF_LINES = -abs(5)
+SPLIT_DICT_BY_SECONDS = 15 # Added this to the upperbound, since we only start at the beginning of a timestamp group
+ADDED_SECONDS_TO_CLIPS = 30
 
 
 def subclip_prerequisite():
 
     file, list_of_contents, selected_file_index = files_displayed_to_user_and_user_selects_file(RawChatDataDir, "_CLEANED.txt")
-
-
     last_line = get_last_timestamp_from_from(file.name)
 
     START = 0
@@ -28,58 +26,47 @@ def subclip_prerequisite():
     END_ROUND_DOWN = END - (END % ROUND_DOWN_VALUE)
 
 
-    d = create_dict_with_timestamps(START, END_ROUND_DOWN)
-    data = convert_raw_time_data_to_dictionary_FILTERED(d, open(file.name, 'r'))
+    dict_with_all_timestamps = create_dict_with_timestamps(START, END_ROUND_DOWN)
+    data = convert_raw_time_data_to_dictionary_FILTERED(dict_with_all_timestamps, open(file.name, 'r'))
 
-    splt_dict = group_dict_values_by_splitter(data, 10)
+    splt_dict = group_dict_values_by_splitter(data, SPLIT_DICT_BY_SECONDS)
     splt_dict = sorted(splt_dict.items(), key=lambda x: x[1])
 
     sort_dict = dict(splt_dict)
+
     seconds_timestamp = []
+
     for i in range(-1, NUMBER_OF_LINES - 1, -1):
         try:
             seconds_timestamp.append(string_time_to_seconds(list(sort_dict)[i]))
         except:
             pass
 
+    seconds_timestamp.sort()
+
     clip, RawVideoFile, name = user_selects_video_to_clip()
 
-    if (not clip):
-        return
+    if (not clip): return
 
-    print("RawVideo: {}".format(RawVideoFile.name))
-    print("Name: {}".format(name))
     Thread = threading.Thread(target=createClip, args=(seconds_timestamp, clip, name, ))
     Thread.start()
+
 
 def createClip(seconds_timestamp, clip, name):
     START_VIDEO = clip.start
     END_VIDEO = clip.end
-    seconds_timestamp.sort()
     list_of_clips = []
 
     for i in seconds_timestamp:
         try:
-            lower_bound = (i - VIDEO_SPLITTER) if (i - VIDEO_SPLITTER) > START_VIDEO else START_VIDEO
-            upper_bound = (i + VIDEO_SPLITTER) if (i + VIDEO_SPLITTER) < END_VIDEO else END_VIDEO
+            lower_bound = (i - ADDED_SECONDS_TO_CLIPS) if (i - ADDED_SECONDS_TO_CLIPS) > START_VIDEO else START_VIDEO
+            upper_bound = (i + ADDED_SECONDS_TO_CLIPS + SPLIT_DICT_BY_SECONDS) if (i + ADDED_SECONDS_TO_CLIPS + SPLIT_DICT_BY_SECONDS) < END_VIDEO else END_VIDEO
             list_of_clips.append(clip.subclip(lower_bound, upper_bound))
         except: pass
 
 
     combined_clips = concatenate_videoclips(list_of_clips)
-    #print(name)
     combined_clips.write_videofile(ClippedVideo + "/" + name + "_COMBINED.mp4")
-
-
-def user_selects_video_to_clip():
-    RawVideoFile, listofcontent, i = files_displayed_to_user_and_user_selects_file(VideoDownloadedDir, "mp4")
-    if (not RawVideoFile):
-        return False
-
-    clip = VideoFileClip(RawVideoFile.name)
-
-    #return clip, RawVideoFile, RawVideoFile.name
-    return clip, RawVideoFile, listofcontent[int(i)]
 
 
 def files_displayed_to_user_and_user_selects_file(file_directory, extension):
@@ -108,6 +95,14 @@ def files_displayed_to_user_and_user_selects_file(file_directory, extension):
     return File, list_of_contents, i
 
 
+def user_selects_video_to_clip():
+    RawVideoFile, listofcontent, i = files_displayed_to_user_and_user_selects_file(VideoDownloadedDir, "mp4")
+    if (not RawVideoFile):
+        return False
+
+    clip = VideoFileClip(RawVideoFile.name)
+
+    return clip, RawVideoFile, listofcontent[int(i)]
 
 # We get splitter amount of values --> add them up --> place it
 def group_dict_values_by_splitter(dict, splitter):
@@ -116,7 +111,6 @@ def group_dict_values_by_splitter(dict, splitter):
     for item in chunks(dict, splitter):
         new_dict[list(item.keys())[0]] = sum(item.values())
     return new_dict
-
 
 def chunks(data, SIZE=1000000):
     it = iter(data)
