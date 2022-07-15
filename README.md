@@ -89,6 +89,8 @@ Do you have [Python](https://www.python.org/downloads/) installed?
 Developed this using PyCharm on Windows 10
 
 #### Does PyInstaller Work?
+
 I used PyInstaller. File > Tools > External Tools
+
 ![image](https://user-images.githubusercontent.com/64375555/179183895-de1b1d5e-0bae-45c6-a86f-40e8687bdcca.png)
 
