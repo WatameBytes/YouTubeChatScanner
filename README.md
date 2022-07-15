@@ -6,14 +6,6 @@ I got a job as an Integration Engineer and want to keep my programming skills sh
 While I was clipping some VTuber as a hobby. I thought "Could I automate this?"
 
 
-
-
-
-## Badges
-
-
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-
 ## Documentation
 
 [Documentation](https://linktodocumentation)
@@ -94,3 +86,6 @@ I used PyInstaller. File > Tools > External Tools
 
 ![image](https://user-images.githubusercontent.com/64375555/179183895-de1b1d5e-0bae-45c6-a86f-40e8687bdcca.png)
 
+## Badges
+
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
