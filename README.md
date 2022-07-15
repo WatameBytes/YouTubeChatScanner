@@ -86,6 +86,6 @@ I used PyInstaller. File > Tools > External Tools
 
 ![image](https://user-images.githubusercontent.com/64375555/179183895-de1b1d5e-0bae-45c6-a86f-40e8687bdcca.png)
 
-## Badges
+## License
 
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[GNU GPLv3 ](https://choosealicense.com/licenses/gpl-3.0/)
