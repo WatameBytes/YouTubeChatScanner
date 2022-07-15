@@ -11,9 +11,9 @@ from Utilities.HelperFunctions import RawChatDataDir, string_time_to_seconds, RO
     ClippedVideo, VideoDownloadedDir, getContents
 
 
-NUMBER_OF_LINES = -abs(5)
-SPLIT_DICT_BY_SECONDS = 15 # Added this to the upperbound, since we only start at the beginning of a timestamp group
-ADDED_SECONDS_TO_CLIPS = 30
+NUMBER_OF_LINES = -abs(2)
+SPLIT_DICT_BY_SECONDS = 10 # Added this to the upperbound, since we only start at the beginning of a timestamp group
+ADDED_SECONDS_TO_CLIPS = 0
 
 
 def subclip_prerequisite():
@@ -66,6 +66,7 @@ def createClip(seconds_timestamp, clip, name):
 
 
     combined_clips = concatenate_videoclips(list_of_clips)
+    name = name.split(".")[0]
     combined_clips.write_videofile(ClippedVideo + "/" + name + "_COMBINED.mp4")
 
 
