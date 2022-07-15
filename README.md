@@ -87,3 +87,5 @@ I used PyInstaller. File > Tools > External Tools
 ## License
 
 [GNU GPLv3 ](https://choosealicense.com/licenses/gpl-3.0/)
+
+> GitHub [@ArisaBonsaiTree](https://github.com/ArisaBonsaiTree)
