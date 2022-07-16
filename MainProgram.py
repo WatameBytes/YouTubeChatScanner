@@ -7,11 +7,15 @@ from DownloadVideo import RunDownloader
 from ComputeData import ComputeRawChatData
 from Utilities import PrintFunctions, HelperFunctions
 from Editor import EditVideos
+from ComputeData import KMeans
 
 PrintFunctions.print_list_of_choices()
 
 while(True):
     os.chdir(HelperFunctions.MainDirectory)
+    KMeans.k()
+    input("Buffer to stop infinite loop")
+    continue
 
     try:
         choice = (int(input("Please pick an option. Type '0' to view your options: ")))

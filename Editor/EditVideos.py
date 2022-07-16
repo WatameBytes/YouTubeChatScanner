@@ -57,21 +57,22 @@ def subclip_prerequisite():
         return
 
 
-    ADDED_SECONDS_TO_CLIPS = int(input("How many seconds do you want to add to each clip [ALSO ADDED 'SPLIT_DICT_BY_SECONDS' into the upperbound? "))
-
-    Thread = threading.Thread(target=createClip, args=(seconds_timestamp, clip, name, ADDED_SECONDS_TO_CLIPS, SPLIT_DICT_BY_SECONDS, ))
+    #ADDED_SECONDS_TO_CLIPS = int(input("How many seconds do you want to add to each clip [ALSO ADDED 'SPLIT_DICT_BY_SECONDS' into the upperbound? "))
+    LOWER_BOUND_SECS = int(input("How many seconds do we want to add BEFORE the timestamp? "))
+    UPPER_BOUND_SECS = int(input("How many seconds do you want to add AFTER the timestamp? "))
+    Thread = threading.Thread(target=createClip, args=(seconds_timestamp, clip, name, LOWER_BOUND_SECS, UPPER_BOUND_SECS,))
     Thread.start()
 
 
-def createClip(seconds_timestamp, clip, name, ADDED_SECONDS_TO_CLIPS, SPLIT_DICT_BY_SECONDS):
+def createClip(seconds_timestamp, clip, name, LOWER_BOUND_SECS, UPPER_BOUND_SECS,):
     START_VIDEO = clip.start
     END_VIDEO = clip.end
     list_of_clips = []
 
     for i in seconds_timestamp:
         try:
-            lower_bound = (i - ADDED_SECONDS_TO_CLIPS) if (i - ADDED_SECONDS_TO_CLIPS) > START_VIDEO else START_VIDEO
-            upper_bound = (i + ADDED_SECONDS_TO_CLIPS + SPLIT_DICT_BY_SECONDS) if (i + ADDED_SECONDS_TO_CLIPS + SPLIT_DICT_BY_SECONDS) < END_VIDEO else END_VIDEO
+            lower_bound = (i - LOWER_BOUND_SECS) if (i - LOWER_BOUND_SECS) > START_VIDEO else START_VIDEO
+            upper_bound = (i + UPPER_BOUND_SECS) if (i + UPPER_BOUND_SECS) < END_VIDEO else END_VIDEO
             list_of_clips.append(clip.subclip(lower_bound, upper_bound))
         except: pass
 

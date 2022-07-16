@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a66727e-0df2-4734-8e80-3437702493d8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ComputeData/HistogramComputeRawChatData.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ComputeData/KMeans.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ComputeData/Algorithm/FillerGroup.py" beforeDir="false" afterPath="$PROJECT_DIR$/ComputeData/Algorithm/FillerGroup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utilities/HelperFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities/HelperFunctions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Editor/EditVideos.py" beforeDir="false" afterPath="$PROJECT_DIR$/Editor/EditVideos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainProgram.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainProgram.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,23 +31,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Arisa/PycharmProjects/julyProject/ComputeData/ComputeHelperFunctions.py&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;discord-application&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Arisa/PycharmProjects/julyProject/ComputeData",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "discord-application"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Arisa\PycharmProjects\julyProject\ComputeData" />
       <recent name="C:\Users\Arisa\PycharmProjects\julyProject\ComputeData\Algorithm" />
       <recent name="C:\Users\Arisa\PycharmProjects\julyProject\Editor" />
       <recent name="C:\Users\Arisa\PycharmProjects\julyProject\Project\VideosDownloaded" />
       <recent name="C:\Users\Arisa\PycharmProjects\julyProject\Project\DownloadVideo" />
-      <recent name="C:\Users\Arisa\PycharmProjects\julyProject" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Arisa\PycharmProjects\julyProject\RawYoutubeChatData" />
@@ -57,7 +58,7 @@
       <recent name="C:\Users\Arisa\PycharmProjects\julyProject\Project\RawYoutubeChatData" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.HistogramComputeRawChatData">
+  <component name="RunManager" selected="Python.MainProgram (1)">
     <configuration name="DictPlay" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="julyProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -170,8 +171,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.HistogramComputeRawChatData" />
         <item itemvalue="Python.MainProgram (1)" />
+        <item itemvalue="Python.HistogramComputeRawChatData" />
         <item itemvalue="Python.FillerGroup" />
         <item itemvalue="Python.Wheel" />
         <item itemvalue="Python.DictPlay" />
@@ -209,6 +210,7 @@
       <workItem from="1657868093322" duration="2946000" />
       <workItem from="1657951662440" duration="5586000" />
       <workItem from="1657967324313" duration="1457000" />
+      <workItem from="1658007816624" duration="2989000" />
     </task>
     <servers />
   </component>
@@ -245,13 +247,13 @@
     <SUITE FILE_PATH="coverage/julyProject$DictPlay.coverage" NAME="DictPlay Coverage Results" MODIFIED="1657752861052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ComputeData/Algorithm" />
     <SUITE FILE_PATH="coverage/julyProject$checkbutton.coverage" NAME="checkbutton Coverage Results" MODIFIED="1657064279881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TkinterPlayground" />
     <SUITE FILE_PATH="coverage/julyProject$FillerGroup.coverage" NAME="FillerGroup Coverage Results" MODIFIED="1657809637451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ComputeData/Algorithm" />
-    <SUITE FILE_PATH="coverage/julyProject$MainProgram__1_.coverage" NAME="MainProgram (1) Coverage Results" MODIFIED="1657998597455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/julyProject$MainProgram__1_.coverage" NAME="MainProgram (1) Coverage Results" MODIFIED="1658010812079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/julyProject$OOPExample__1_.coverage" NAME="OOPExample (1) Coverage Results" MODIFIED="1657067160265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonHowTo/oop" />
     <SUITE FILE_PATH="coverage/julyProject$asyncioExample__1_.coverage" NAME="asyncioExample (1) Coverage Results" MODIFIED="1657065156979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Two functions simultaneously" />
     <SUITE FILE_PATH="coverage/julyProject$listbox.coverage" NAME="listbox Coverage Results" MODIFIED="1657064299131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TkinterPlayground" />
     <SUITE FILE_PATH="coverage/julyProject$menuBar.coverage" NAME="menuBar Coverage Results" MODIFIED="1657062817401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TkinterPlayground" />
     <SUITE FILE_PATH="coverage/julyProject$HelloYoutube.coverage" NAME="HelloYoutube Coverage Results" MODIFIED="1657067143140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonHowTo/oop" />
-    <SUITE FILE_PATH="coverage/julyProject$HistogramComputeRawChatData.coverage" NAME="HistogramComputeRawChatData Coverage Results" MODIFIED="1657998661019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ComputeData" />
+    <SUITE FILE_PATH="coverage/julyProject$HistogramComputeRawChatData.coverage" NAME="HistogramComputeRawChatData Coverage Results" MODIFIED="1658001640610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ComputeData" />
     <SUITE FILE_PATH="coverage/julyProject$threadingExample__1_.coverage" NAME="threadingExample (1) Coverage Results" MODIFIED="1657065123954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Two functions simultaneously" />
     <SUITE FILE_PATH="coverage/julyProject$MainInheritance.coverage" NAME="MainInheritance Coverage Results" MODIFIED="1657068365228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonHowTo/Inheritance" />
     <SUITE FILE_PATH="coverage/julyProject$buttons.coverage" NAME="buttons Coverage Results" MODIFIED="1657064275500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TkinterPlayground" />
