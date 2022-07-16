@@ -27,14 +27,21 @@ def k():
 
     print("Just data converted to timestamps: {}".format(data_timestamp))
 
-    threshhold = 5
+
+
+    threshhold = 3
 
     cluster_dict = dict()
     make_dict = True
     saved_key = None
 
+    sum = 0
+    counter = 0
+
     #for k, v in data.items():
     for k, v in data_timestamp.items():
+        sum += v
+        counter += 1
         if (v > threshhold) and make_dict:
             saved_key = k
             cluster_dict[saved_key] = 1
@@ -51,6 +58,7 @@ def k():
         else:
             make_dict = True
 
+    print("Average: {}".format(sum/counter))
     print("Clustered data: {}".format(cluster_dict))
 
     timestamp_dict = dict()
@@ -72,6 +80,22 @@ def k():
     #
     cluster_dict = cluster(timestamp_dict, 5)
     print("Cluster-Data: {}".format(cluster_dict))
+
+    print("Removing non-interval values")
+    cleaned_dict = remove_non_intervales(cluster_dict)
+    print("Cleaned-Data: {}".format(cleaned_dict))
+
+
+def remove_non_intervales(data):
+    cleaned_dict = dict()
+    make_dict = True
+    saved_key = None
+
+    for k,v in data.items():
+        if '-' in k:
+            cleaned_dict[k] = v
+
+    return cleaned_dict
 
 
 
