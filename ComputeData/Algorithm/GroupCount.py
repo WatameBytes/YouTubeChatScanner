@@ -11,18 +11,25 @@ from ComputeData.ComputeHelperFunctions \
 
 
 
-listOfDicts = []
-splitted_dic = []
+
 
 def compute_group(list_of_contents, selected_file_index, dict_with_raw_time_data):
+    listOfDicts = []
+    splitted_dic = []
+
     listOfDicts = create_dict_with_split_value_array(splitValues)
     file_instance, stripped_file_name = create_output_file(selected_file_index, list_of_contents, GroupChatComputeDataDir)
 
+    # TODO: PROBLEM --> Splitted Dict[selected_file_index]:
     #Create groups in our dictionary
+
     for i in range(len(splitValues)):
         splitted_dic.append(copy_dict_to_splitted_dic(dict_with_raw_time_data, listOfDicts[i], splitValues[i]))
+
 
     for selected_file_index in range(len(splitValues)):
         write_results_to_file(file_instance, splitted_dic[selected_file_index], str(splitValues[selected_file_index]), NUMBER_OF_LINES)
 
+
+    file_instance.close()
     print('{} has finished computing'.format(stripped_file_name + '_GROUP_ComputedData.txt'))

@@ -15,6 +15,7 @@ def compute_no_group(list_of_contents, selected_file_index, dict_with_raw_time_d
 
     write_results_to_file(file_instance, dict_with_raw_time_data, "No Grouping", NUMBER_OF_LINES)
 
+    file_instance.close()
     print('{} has finished computing'.format(stripped_file_name + '_PURE_ComputedData.txt'))
 
 

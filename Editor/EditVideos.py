@@ -11,9 +11,9 @@ from Utilities.HelperFunctions import RawChatDataDir, string_time_to_seconds, RO
     ClippedVideo, VideoDownloadedDir, getContents
 
 
-NUMBER_OF_LINES = -abs(2)
-SPLIT_DICT_BY_SECONDS = 10 # Added this to the upperbound, since we only start at the beginning of a timestamp group
-ADDED_SECONDS_TO_CLIPS = 0
+# NUMBER_OF_LINES = -abs(2)
+# SPLIT_DICT_BY_SECONDS = 10 # Added this to the upperbound, since we only start at the beginning of a timestamp group
+# ADDED_SECONDS_TO_CLIPS = 0
 
 
 def subclip_prerequisite():
@@ -29,12 +29,17 @@ def subclip_prerequisite():
     dict_with_all_timestamps = create_dict_with_timestamps(START, END_ROUND_DOWN)
     data = convert_raw_time_data_to_dictionary_FILTERED(dict_with_all_timestamps, open(file.name, 'r'))
 
+    SPLIT_DICT_BY_SECONDS = int(input("How many seconds do you want to break the dictionary in[SPLITTER]? "))
+
     splt_dict = group_dict_values_by_splitter(data, SPLIT_DICT_BY_SECONDS)
     splt_dict = sorted(splt_dict.items(), key=lambda x: x[1])
 
     sort_dict = dict(splt_dict)
 
     seconds_timestamp = []
+
+    NUMBER_OF_LINES = int(input("How many lines of data do you want to use[HOW MANY TIMESTAMPS]? "))
+    NUMBER_OF_LINES = -abs(NUMBER_OF_LINES)
 
     for i in range(-1, NUMBER_OF_LINES - 1, -1):
         try:
@@ -46,13 +51,19 @@ def subclip_prerequisite():
 
     clip, RawVideoFile, name = user_selects_video_to_clip()
 
-    if (not clip): return
 
-    Thread = threading.Thread(target=createClip, args=(seconds_timestamp, clip, name, ))
+    if (not clip):
+        print("ERROR")
+        return
+
+
+    ADDED_SECONDS_TO_CLIPS = int(input("How many seconds do you want to add to each clip [ALSO ADDED 'SPLIT_DICT_BY_SECONDS' into the upperbound? "))
+
+    Thread = threading.Thread(target=createClip, args=(seconds_timestamp, clip, name, ADDED_SECONDS_TO_CLIPS, SPLIT_DICT_BY_SECONDS, ))
     Thread.start()
 
 
-def createClip(seconds_timestamp, clip, name):
+def createClip(seconds_timestamp, clip, name, ADDED_SECONDS_TO_CLIPS, SPLIT_DICT_BY_SECONDS):
     START_VIDEO = clip.start
     END_VIDEO = clip.end
     list_of_clips = []

@@ -1,4 +1,5 @@
 import os
+import threading
 from itertools import islice
 
 from ComputeData import ComputeHelperFunctions
@@ -19,6 +20,7 @@ def dataProcessing():
     dict_with_raw_time_data = convert_raw_time_data_to_dictionary_UNFILTERED(File)
 
     compute_no_group(list_of_contents, selected_file_index, dict_with_raw_time_data)
+
     compute_group(list_of_contents, selected_file_index, dict_with_raw_time_data)
 
     compute_filler_group(list_of_contents, selected_file_index, File)
