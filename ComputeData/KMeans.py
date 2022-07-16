@@ -20,6 +20,39 @@ def k():
         10: 7
     }
 
+    data_timestamp = dict()
+    for k, v in data.items():
+        new_key = convert_seconds_into_timestamps(k)
+        data_timestamp[new_key] = v
+
+    print("Just data converted to timestamps: {}".format(data_timestamp))
+
+    threshhold = 5
+
+    cluster_dict = dict()
+    make_dict = True
+    saved_key = None
+
+    #for k, v in data.items():
+    for k, v in data_timestamp.items():
+        if (v > threshhold) and make_dict:
+            saved_key = k
+            cluster_dict[saved_key] = 1
+            make_dict = False
+
+        elif (v > threshhold) and not make_dict:
+            cluster_dict[saved_key] = cluster_dict[saved_key] + 1
+            new_key = str(saved_key) + "-"
+            new_key = new_key.split("-")[0]
+            new_key = new_key + "-" + k
+            cluster_dict[new_key] = cluster_dict.pop(saved_key)
+            saved_key = new_key
+
+        else:
+            make_dict = True
+
+    print("Clustered data: {}".format(cluster_dict))
+
     timestamp_dict = dict()
 
     for i in range(0, 10169 + 1, 1):
@@ -36,10 +69,10 @@ def k():
             timestamp_dict[line] = timestamp_dict[line] + 1
 
     #print(timestamp_dict)
+    #
+    cluster_dict = cluster(timestamp_dict, 5)
+    print("Cluster-Data: {}".format(cluster_dict))
 
-    cluster_dict = cluster(data, 5)
-    #cluster_dict = cluster(timestamp_dict, 5)
-    print(cluster_dict)
 
 
 def cluster(data, threshhold):
@@ -49,7 +82,7 @@ def cluster(data, threshhold):
 
     for k, v in data.items():
         if (v > threshhold) and make_dict:
-            saved_key = convert_seconds_into_timestamps(k)
+            saved_key = k
             cluster_dict[saved_key] = 1
             make_dict = False
 
@@ -57,7 +90,7 @@ def cluster(data, threshhold):
             cluster_dict[saved_key] = cluster_dict[saved_key] + 1
             new_key = str(saved_key) + "-"
             new_key = new_key.split("-")[0]
-            new_key = new_key + "-" + str(convert_seconds_into_timestamps(k))
+            new_key = new_key + "-" + k
             cluster_dict[new_key] = cluster_dict.pop(saved_key)
             saved_key = new_key
 
