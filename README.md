@@ -3,6 +3,8 @@
 
 I got a job as an Integration Engineer and want to keep my programming skills sharp. I plan to work on a big project every month.
 
+**You will need to run a separate MainProgram.py for each video for the best performance**
+
 While I was clipping some VTuber as a hobby. I thought "Could I automate this?"
 
 ## Badges
