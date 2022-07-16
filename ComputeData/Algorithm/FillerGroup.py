@@ -2,7 +2,8 @@
 # Meaning we break the data into seconds instead of groups --> 10 means break it every 10 secs
 # PRO: THE BEST ALGORITHM OF THE THREE
 # PRO: Implemented an OFFSET, since chat takes time to react due to stream delay and human reaction
-# CON: none :)
+# CON: One con I see is that we are manually grouping them by seconds. We could look into grouping them with some
+# clustering algorithm
 
 from Utilities.HelperFunctions import FilterChatComputeDataDir, splitValues, NUMBER_OF_LINES, STREAM_DELAY, ROUND_DOWN_VALUE
 

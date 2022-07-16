@@ -1,21 +1,6 @@
 import os
-# USE THIS WHEN WE ARE RUNNING IN OUR MAIN PROGRAM
 
 MainDirectory = os.getcwd()
-
-#MainDirectory = "../../../julyProject"
-
-#MainDirectory = "../julyProject/" # USE THIS WHEN RUNNING TEST DIR
-
-
-# Algo testing
-#MainDirectory = "../../../julyProject"
-#print(MainDirectory)
-
-# script_dir = os.path.dirname(__file__)
-# rel_path = "2091/data.txt"
-# abs_file_path = os.path.join(script_dir, rel_path)
-
 RawChatDataDir = MainDirectory + "\\RawYouTubeChatData"
 VideoDownloadedDir = MainDirectory + "\\VideosDownloaded"
 ComputedDataDir = MainDirectory + "\\DataComputed"
