@@ -29,7 +29,7 @@ def k():
 
 
 
-    threshhold = 3
+    threshhold = 1
 
     cluster_dict = dict()
     make_dict = True
@@ -84,6 +84,10 @@ def k():
     print("Removing non-interval values")
     cleaned_dict = remove_non_intervales(cluster_dict)
     print("Cleaned-Data: {}".format(cleaned_dict))
+
+
+
+
 
 
 def remove_non_intervales(data):
