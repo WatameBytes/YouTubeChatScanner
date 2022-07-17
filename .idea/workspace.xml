@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a66727e-0df2-4734-8e80-3437702493d8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ComputeData/KMeans.py" beforeDir="false" afterPath="$PROJECT_DIR$/ComputeData/KMeans.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ComputeData/GroupAgain.py" beforeDir="false" afterPath="$PROJECT_DIR$/ComputeData/GroupAgain.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +207,7 @@
       <workItem from="1657868093322" duration="2946000" />
       <workItem from="1657951662440" duration="5586000" />
       <workItem from="1657967324313" duration="1457000" />
-      <workItem from="1658007816624" duration="10792000" />
+      <workItem from="1658007816624" duration="11550000" />
     </task>
     <servers />
   </component>
@@ -258,7 +257,7 @@
     <SUITE FILE_PATH="coverage/julyProject$buttons.coverage" NAME="buttons Coverage Results" MODIFIED="1657064275500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TkinterPlayground" />
     <SUITE FILE_PATH="coverage/julyProject$entry.coverage" NAME="entry Coverage Results" MODIFIED="1657065858666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TkinterPlayground" />
     <SUITE FILE_PATH="coverage/julyProject$DictPlayHouse.coverage" NAME="DictPlayHouse Coverage Results" MODIFIED="1657575458096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DownloadVideo" />
-    <SUITE FILE_PATH="coverage/julyProject$GroupAgain.coverage" NAME="GroupAgain Coverage Results" MODIFIED="1658018709424" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ComputeData" />
+    <SUITE FILE_PATH="coverage/julyProject$GroupAgain.coverage" NAME="GroupAgain Coverage Results" MODIFIED="1658019438903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ComputeData" />
     <SUITE FILE_PATH="coverage/julyProject$hello_youtube.coverage" NAME="hello_youtube Coverage Results" MODIFIED="1657066485367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonHowTo/modules" />
     <SUITE FILE_PATH="coverage/julyProject$EditVideos.coverage" NAME="EditVideos Coverage Results" MODIFIED="1657567803109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Editor" />
     <SUITE FILE_PATH="coverage/julyProject$PureCount.coverage" NAME="PureCount Coverage Results" MODIFIED="1657743291298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ComputeData/Algorithm" />

@@ -1,37 +1,15 @@
-from itertools import islice
-
 from ComputeData.ComputeHelperFunctions import convert_string_timestamps_into_seconds
+# TODO: REQUIRE US TO HAVE AN INTERVAL DICT
 
 group = {'02:12-02:14': 3, '02:18-02:21': 4, '02:27-02:28': 2, '02:31-02:32': 2, '02:36-02:37': 2, '02:50-02:52': 3, '02:56-02:57': 2, '03:00-03:01': 2}
 
 keys = list(group)
 value = list(group.values())
 
-
-
-
-
-def get_nth_key(dictionary, n=0):
-    if n < 0:
-        n += len(dictionary)
-    for i, key in enumerate(dictionary.keys()):
-        if i == n:
-            return key
-    raise IndexError("dictionary index out of range")
-
-def get_nth_value(dictionary, n=0):
-    if n < 0:
-        n += len(dictionary)
-    for i, value in enumerate(dictionary.values()):
-        if i == n:
-            return value
-    raise IndexError("dictionary index out of range")
-
 print(group)
-overlap = 5
-print("==================")
 
-def group_me(keys, check):
+
+def group_me(keys, check, overlap):
     if check == 0:
         return
 
@@ -62,13 +40,10 @@ def group_me(keys, check):
         return
 
     check -= 1
-    group_me(keys, check)
+    group_me(keys, check, overlap)
 
 
-group_me(keys, len(keys))
-
-print(keys)
-print(value)
+group_me(keys, len(keys), 5)
 
 clustered_dict = dict()
 for x in range(len(keys)):
@@ -76,45 +51,4 @@ for x in range(len(keys)):
 
 print(clustered_dict)
 
-# #print(len(group))
-# for i in range(len(group)):
-#     print(group.values())
-
-#for k,v in group.values():
-
-    #print(k)
-
-
-# for i in range(len(keys)):
-#
-#     if(len(keys) == i or ((i + 1) > len(keys))):
-#         break
-#
-#     first = keys[i]
-#     second = keys[i + 1]
-#
-#     print(overlap)
-#     print(first)
-#     print(second)
-#
-#     check_first = convert_string_timestamps_into_seconds(first.split('-')[1])
-#     check_second = convert_string_timestamps_into_seconds(second.split('-')[0])
-#
-#     if((check_second - check_first) < overlap):
-#         new_key = first.split('-')[0] + "-" + second.split('-')[1]
-#         print("New key: " + new_key)
-#
-#         print("Overlap detected")
-#         cluster_group[new_key] = value[i] + value[i + 1]
-#
-#
-#     keys.pop(i + 1)
-#     value.pop(i + 1)
-#     print("-----------")
-#
-#
-# print("HELLO WORLD")
-# print("HE")
-# print(group)
-# print(cluster_group)
 
