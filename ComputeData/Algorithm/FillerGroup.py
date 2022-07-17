@@ -14,13 +14,12 @@ from ComputeData.ComputeHelperFunctions \
     copy_dict_to_splitted_dic, create_dict_with_split_value_array, write_results_to_file
 
 
-def compute_filler_group(list_of_contents, selected_file_index, raw_chat_file):
+def compute_filler_group(list_of_contents, selected_file_index, filtered_file, last_line):
+
     splitted_dic = []
-
     listOfDicts = create_dict_with_split_value_array(splitValues)
-
     file_instance, stripped_file_name = create_output_file(selected_file_index, list_of_contents, FilterChatComputeDataDir)
-    filtered_file, last_line = sanitize_raw_chat_timestamp_data_and_get_last_timestamp(raw_chat_file.name, STREAM_DELAY)
+
 
     START = 0
 

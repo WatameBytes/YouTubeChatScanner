@@ -13,7 +13,8 @@ PrintFunctions.print_list_of_choices()
 
 while(True):
     os.chdir(HelperFunctions.MainDirectory)
-    KMeans.k()
+
+    ComputeRawChatData.dataProcessing()
     input("Buffer to stop infinite loop")
     continue
 

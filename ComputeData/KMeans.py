@@ -1,9 +1,4 @@
-from turtle import width
-
-from matplotlib import pyplot as plt
-
 from ComputeData.ComputeHelperFunctions import convert_seconds_into_timestamps, convert_string_timestamps_into_seconds
-
 
 def k():
 
@@ -26,7 +21,7 @@ def k():
     print("Cluster-Data: {}".format(cluster_dict))
 
     print("Removing non-interval values")
-    cleaned_dict = remove_non_intervales(cluster_dict)
+    cleaned_dict = remove_non_intervals(cluster_dict)
     print("Cleaned-Data: {}".format(cleaned_dict))
 
     keys = list(cleaned_dict)
@@ -48,7 +43,7 @@ def k():
 
 
 
-def remove_non_intervales(data):
+def remove_non_intervals(data):
     cleaned_dict = dict()
     make_dict = True
     saved_key = None
