@@ -81,7 +81,7 @@ Do you have [Python](https://www.python.org/downloads/) installed?
 
 #### Can't run "yt-dlp" or having errors with "ytDownload.sh"?
 
-You will need to download [yt-dlp](https://github.com/yt-dlp/yt-dlp) and place in your C://..../Programs//Python//Python39//Scripts folder or in the same
+You will need to download [yt-dlp](https://github.com/yt-dlp/yt-dlp) and place in your C:\Users\[Name]\AppData\Local\Programs\Python\Python311\Scripts folder or in the same
 folder where you have FFMPEG.exe.
 
 
