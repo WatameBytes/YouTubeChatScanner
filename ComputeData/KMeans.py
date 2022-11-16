@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 from ComputeData.ComputeHelperFunctions import convert_seconds_into_timestamps, convert_string_timestamps_into_seconds
 
 
-def k():
+def kMeans_cluster():
 
     timestamp_dict = dict()
 

@@ -13,9 +13,11 @@ PrintFunctions.print_list_of_choices()
 
 while(True):
     os.chdir(HelperFunctions.MainDirectory)
-    KMeans.k()
-    input("Buffer to stop infinite loop")
-    continue
+    # KMeans.k()
+    # input("Buffer to stop infinite loop")
+    # continue
+    ComputeRawChatData.dataProcessing()
+    # continue
 
     try:
         choice = (int(input("Please pick an option. Type '0' to view your options: ")))

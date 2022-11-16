@@ -9,6 +9,7 @@ ClippedVideo = MainDirectory + "\\ClippedVideos"
 PureChatComputeDataDir = MainDirectory + "\\DataComputed\\PureData"
 GroupChatComputeDataDir = MainDirectory + "\\DataComputed\\GroupData"
 FilterChatComputeDataDir = MainDirectory + "\\DataComputed\\FillerData"
+ClusterChatComputeDataDir = MainDirectory + "\\DataComputed\\ClusterData"
 
 splitValues = [1, 5, 10, 15, 20, 25, 30, 35]
 NUMBER_OF_LINES = -abs(40)
