@@ -2,7 +2,8 @@ from ComputeData.ComputeHelperFunctions \
     import create_output_file, write_results_to_file, copy_dict_to_splitted_dic, create_dict_with_split_value_array, \
     sanitize_raw_chat_timestamp_data_and_get_last_timestamp
 from Utilities import HelperFunctions
-from Utilities.HelperFunctions import NUMBER_OF_LINES, ClusterChatComputeDataDir, STREAM_DELAY
+from Utilities.HelperFunctions import NUMBER_OF_LINES, ClusterChatComputeDataDir, STREAM_DELAY, \
+    CLUSTER_INTERVAL_THRESHHOLD
 from ComputeData.ComputeHelperFunctions import convert_seconds_into_timestamps, convert_string_timestamps_into_seconds
 
 def compute_cluster(list_of_contents, selected_file_index, raw_chat_file):
@@ -27,7 +28,8 @@ def compute_cluster(list_of_contents, selected_file_index, raw_chat_file):
         if (line in timestamp_dict):
             timestamp_dict[line] = timestamp_dict[line] + 1
 
-    cluster_dict = cluster(timestamp_dict, 5)
+    print("Timestamp_dict: {}".format(timestamp_dict))
+    cluster_dict = cluster(timestamp_dict, CLUSTER_INTERVAL_THRESHHOLD)
 
     print("Cluster-Data: {}".format(cluster_dict))
 
@@ -48,12 +50,10 @@ def compute_cluster(list_of_contents, selected_file_index, raw_chat_file):
     print("Clustered Dict")
     print(clustered_dict)
 
-
-    print('{} has finished computing'.format(stripped_file_name + '_PURE_ComputedData.txt'))
-
+    file_instance.write("TEST")
 
 
-
+    print('{} has finished computing'.format(stripped_file_name + '_CLUSTER_ComputedData.txt'))
 
 
 

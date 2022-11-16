@@ -14,6 +14,7 @@ ClusterChatComputeDataDir = MainDirectory + "\\DataComputed\\ClusterData"
 splitValues = [1, 5, 10, 15, 20, 25, 30, 35]
 NUMBER_OF_LINES = -abs(40)
 STREAM_DELAY = 5
+CLUSTER_INTERVAL_THRESHHOLD = 7
 ROUND_DOWN_VALUE = 10
 
 def getMainDirectory():
