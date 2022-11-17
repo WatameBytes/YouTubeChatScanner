@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a66727e-0df2-4734-8e80-3437702493d8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ComputeData/Algorithm/ClusterGroup.py" beforeDir="false" afterPath="$PROJECT_DIR$/ComputeData/Algorithm/ClusterGroup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ComputeData/ComputeRawChatData.py" beforeDir="false" afterPath="$PROJECT_DIR$/ComputeData/ComputeRawChatData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataComputed/ClusterData/FauanFallGuys_ComputedData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataComputed/FillerData/FauanFallGuys_ComputedData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataComputed/FillerData/SelenMarioWorld_ComputedData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataComputed/GroupData/FauanFallGuys_ComputedData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataComputed/GroupData/SelenMarioWorld_ComputedData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataComputed/PureData/FauanFallGuys_ComputedData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataComputed/PureData/SelenMarioWorld_ComputedData.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Utilities/HelperFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utilities/HelperFunctions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,19 +38,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/arisa/PycharmProjects/YouTubeChatScannerJulyProject",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/arisa/PycharmProjects/YouTubeChatScannerJulyProject&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Arisa\PycharmProjects\julyProject\ComputeData" />
@@ -220,7 +228,7 @@
       <workItem from="1657967324313" duration="1457000" />
       <workItem from="1658007816624" duration="11550000" />
       <workItem from="1668632588437" duration="958000" />
-      <workItem from="1668633566513" duration="4888000" />
+      <workItem from="1668633566513" duration="6236000" />
     </task>
     <servers />
   </component>
@@ -272,7 +280,7 @@
     <SUITE FILE_PATH="coverage/julyProject$main.coverage" NAME="main Coverage Results" MODIFIED="1657066020884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/julyProject$PureCount.coverage" NAME="PureCount Coverage Results" MODIFIED="1657743291298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ComputeData/Algorithm" />
     <SUITE FILE_PATH="coverage/julyProject$radioButtons.coverage" NAME="radioButtons Coverage Results" MODIFIED="1657064252774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TkinterPlayground" />
-    <SUITE FILE_PATH="coverage/YouTubeChatScannerJulyProject$MainProgram.coverage" NAME="MainProgram Coverage Results" MODIFIED="1668638420403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/YouTubeChatScannerJulyProject$MainProgram.coverage" NAME="MainProgram Coverage Results" MODIFIED="1668643043032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/julyProject$threading__1_.coverage" NAME="threading (1) Coverage Results" MODIFIED="1657065056584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Two functions simultaneously" />
     <SUITE FILE_PATH="coverage/julyProject$GroupAgain.coverage" NAME="GroupAgain Coverage Results" MODIFIED="1658019438903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ComputeData" />
     <SUITE FILE_PATH="coverage/YouTubeChatScannerJulyProject$ClusterGroup.coverage" NAME="ClusterGroup Coverage Results" MODIFIED="1668636781011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ComputeData/Algorithm" />

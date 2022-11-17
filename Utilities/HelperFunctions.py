@@ -12,9 +12,17 @@ FilterChatComputeDataDir = MainDirectory + "\\DataComputed\\FillerData"
 ClusterChatComputeDataDir = MainDirectory + "\\DataComputed\\ClusterData"
 
 splitValues = [1, 5, 10, 15, 20, 25, 30, 35]
+
+# Max amount of lines written to a file
 NUMBER_OF_LINES = -abs(40)
+
+#
 STREAM_DELAY = 5
-CLUSTER_INTERVAL_THRESHHOLD = 7
+
+# Cluster variables: How many
+CLUSTER_INTERVAL_THRESHHOLD = 5 # How many times a timestamp should occur
+CLUSTER_OVERLAP_RADIUS = 15 # Range of our interval timestamp before merging
+
 ROUND_DOWN_VALUE = 10
 
 def getMainDirectory():
