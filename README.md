@@ -95,6 +95,11 @@ I used PyInstaller. File > Tools > External Tools
 
 ![image](https://user-images.githubusercontent.com/64375555/179183895-de1b1d5e-0bae-45c6-a86f-40e8687bdcca.png)
 
+#### PyCharm giving you pytchat doesn't exist?
+Go to File > Settings > Project: YouTubeCh... > Python Interpreter > Add Interpreter > (Not sure what I did 100%, but I used Python 3.10) 
+I used Python 3.10, which was located at C:.../AppData/Local/Programs/Python/Python310/python.exe
+You can check what version of Python you have installed by opening command prompt and typing "python" to see what version you have
+
 ## License
 
 [GNU GPLv3 ](https://choosealicense.com/licenses/gpl-3.0/)
