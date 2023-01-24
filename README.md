@@ -1,5 +1,5 @@
 
-# July Project - YouTube Chat Scanner/Chat Compute/Video Downloader/Clipper
+# YouTube Chat Scanner/Chat Compute/Video Downloader/Clipper
 
 I got a job as an Integration Engineer and want to keep my programming skills sharp. 
 
