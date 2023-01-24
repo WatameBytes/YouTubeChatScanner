@@ -1,8 +1,7 @@
 
 # July Project - YouTube Chat Scanner/Chat Compute/Video Downloader/Clipper
 
-I got a job as an Integration Engineer and want to keep my programming skills sharp. I plan to work on a big project every month.
-
+I got a job as an Integration Engineer and want to keep my programming skills sharp. 
 
 While I was clipping some VTuber as a hobby. I thought "Could I automate this?"
 
